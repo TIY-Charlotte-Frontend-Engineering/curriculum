@@ -1,5 +1,5 @@
 # TIY Install Party: Feb 28, 2016
-Install all of the software below. Let Luke or Wes know if you're running into issues. *Install all of this software in the account you plan to use for class.*
+*Install all of this software in the account you plan to use for class.* Let Luke or Wes know if you're running into issues.
 
 ## Web browser
 First, install [Google Chrome](https://www.google.com/chrome/browser/desktop/). We'll be using Chrome as our primary browser in class because it has strong support for web standards and incredible developer tools.
