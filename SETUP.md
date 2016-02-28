@@ -22,6 +22,9 @@ Brackets has a ton of extensions that are all availalbe in the [Extension Regist
 ```bash
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 ```
+
+## Git
+[Install Homebrew](http://brew.sh/) and `brew install git`.
   
 # Other necessary things
 Do these now or risk missing out on important communications.
