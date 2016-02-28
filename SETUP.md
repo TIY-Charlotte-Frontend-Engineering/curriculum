@@ -23,4 +23,12 @@ Brackets has a ton of extensions that are all availalbe in the [Extension Regist
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 ```
   
-  
+# Other necessary things
+Do these now or risk missing out on important communications.
+
+[ ] Create a [Slack](https://slack.com) account and join the `tiycharlotte.slack.com` community. Set your name and photo to something that's clearly related to you (ideally your name and photo).
+[ ] Join the `#frontend-js` Slack channel in the Charlotte community.
+[ ] Create a [Github](https://github.com/) account and it to [this spreadsheet](https://docs.google.com/spreadsheets/d/1QJR6Z-0St5warcTqg8uUkhydl5VX9dFeSZ-BfwrTDc0/edit#gid=0) so that I can invite you to our cohort on Github.
+[ ] Create an account on The Iron Yard Online. You should have gotten an email to sign up this afternoon; if not then send an email to [luke@theironyard.com](mailto:luke@theironyard.com) so I can hook you up.
+[ ] Sign in to Slack and try to stay signed in when you can.
+[ ] **Do your prework.**
