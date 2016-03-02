@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+}
+
+.item {
+    border: 2px solid blue;
+    padding: 1%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    border: 2px solid red;
+}
