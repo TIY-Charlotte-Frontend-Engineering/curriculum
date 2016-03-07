@@ -1,0 +1,12 @@
+#content {
+    @include outer-container(90%);
+    .navigation {
+        @include span-columns(3);
+        background-color: yellow;
+    }
+    .body {
+        @include span-columns(8);
+        @include shift(1);
+        background-color: green;
+    }
+}
