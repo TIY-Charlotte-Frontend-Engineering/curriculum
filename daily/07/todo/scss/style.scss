@@ -1,0 +1,23 @@
+@import '../bourbon/bourbon';
+@import '../neat/neat';
+body {
+    @include outer-container(90%);
+    text-align: center;
+    border: 2px solid purple;
+    .items {
+        @include span-columns(9);
+        background-color: yellow;
+    }
+    .prices {
+        @include span-columns(3);
+        background-color: blue;
+    }
+    input {
+        border: 2px solid black;
+        padding: 5px;
+        margin: 1%;
+    }
+    li {
+        list-style-type: none;
+    }
+}
