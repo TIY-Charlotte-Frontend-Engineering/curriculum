@@ -1,0 +1,33 @@
+section {
+    border: 1px solid black;
+    margin-bottom: 1%;
+}
+
+section div {
+    display: inline-block;
+    padding: 1.5% 0;
+    font-size: 1.2em;
+}
+
+section .status {
+    box-sizing: border-box;
+    width: 20%;
+    margin-right: 1%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+section .status.success {
+    background-color: lightgreen;
+    color: green;
+}
+
+section .status.failure {
+    background-color: lightpink;
+    color: red;
+}
+
+section .name {
+    box-sizing: border-box;
+    width: 70%;
+}
