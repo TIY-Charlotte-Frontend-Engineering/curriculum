@@ -31,3 +31,11 @@ section .name {
     box-sizing: border-box;
     width: 70%;
 }
+
+.whammy {
+    font-size: 2.5em;
+    background-color: lightpink;
+    color: red;
+    text-align: center;
+    padding: 1%;
+}
