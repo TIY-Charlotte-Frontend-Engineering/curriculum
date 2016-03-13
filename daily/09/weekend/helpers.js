@@ -3,9 +3,10 @@
  *
  */
 function check(input, output) {
-    if (typeof (input) === 'number' && typeof (output) === 'number') {
-        return input === output;
-    } else {
+    if (input === undefined && output === undefined) return true;
+    if (input === undefined || output === undefined) return false;
+
+    if (Array.isArray(input) && Array.isArray(output)) {
         if (input.length !== output.length) {
             return false;
         }
@@ -17,6 +18,8 @@ function check(input, output) {
         }
 
         return true;
+    } else {
+        return input === output;
     }
 }
 
@@ -32,7 +35,7 @@ function register(name, output, expected) {
     label.classList.add('status');
     label.innerHTML = working ? '&#10003;' : '&#128683;';
 
-    var nameSection = document.createElement('div');
+    var nameSection = document.createElement('code');
     nameSection.textContent = name;
     nameSection.classList.add('name');
 
