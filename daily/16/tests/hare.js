@@ -4,6 +4,9 @@ var expect = chai.expect;
 
 
 function cherokeeHare(simulation) {
+    if (typeof (simulation.startingPopulation) !== 'number') {
+        return undefined;
+    }
     if (simulation.startingPopulation <= 0) {
         return 0;
     }
@@ -46,5 +49,34 @@ describe('Check different startingPopulations', function () {
         });
 
         expect(rabbits).to.be.equal(0);
+    });
+
+    // Not put in numbers
+    it('should only work with numbers', function () {
+
+        var rabbits = cherokeeHare({
+            startingPopulation: 'old lettuce',
+            birthRate: 1.0,
+            numberOfWeeks: 8,
+        });
+
+        expect(rabbits).to.be.equal(undefined);
+    });
+
+    // Not put in anything
+});
+
+describe('Check different numbersOfWeeks', function () {
+    // Zero or negative number
+    // Decimal number
+
+    it('should return startingPopulation zero or negative case', function () {
+        var rabbits = cherokeeHare({
+            startingPopulation: 150,
+            birthRate: .80,
+            numberOfWeeks: -11,
+        });
+
+        expect(rabbits).to.be.equal(150);
     });
 });

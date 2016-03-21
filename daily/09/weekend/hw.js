@@ -10,7 +10,15 @@ function reduce(items, func, start) {
     return items.reduce(func, start);
 }
 
-function reject(items, func) {}
+function reject(array, func) {
+    var output = [];
+    for (var i = 0; i < array.length; i++) {
+        if (func(array[i]) === false) {
+            output.push(array[i]);
+        }
+    }
+    return output;
+}
 
 function find(items, func) {}
 

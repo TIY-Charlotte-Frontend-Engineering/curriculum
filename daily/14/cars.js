@@ -18,7 +18,7 @@ function HugeCar(make, model) {
 }
 
 function Vehicle() {
-    this.windows = 'glass';
+    //    this.windows = 'glass';
     return this;
 }
 

@@ -64,6 +64,7 @@ window.addEventListener('load', function () {
         //        destination.textContent = source.value;
         // Get the element that contains the text we want.
         var source = document.getElementById('thing');
+
         // Create a new <li> to add to the list.
         var li = document.createElement('li');
         li.textContent = source.value;
