@@ -15,11 +15,15 @@ function ktof(kelvin) {
 
 window.addEventListener('load', function () {
     getWeather('Charlotte, NC', function (weather) {
-        var conditions = document.getElementById('conditions');
-        conditions.textContent = weather.weather[0].description;
+        var info = _.template(document.getElementById('weather-template').textContent);
+        console.log(info({
+            temperature: ktof(weather.main.temp),
+            image_url: 'whatever.gif',
+        }));
 
-        var temperature = document.getElementById('temperature');
-        temperature.textContent = ktof(weather.main.temp);
+        console.log(info({
+            temperature: 167,
+        }));
     });
 
 });

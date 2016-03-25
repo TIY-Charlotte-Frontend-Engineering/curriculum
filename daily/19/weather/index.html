@@ -2,13 +2,29 @@
 <html>
 
 <head>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
     <script src="weather.js"></script>
+
+
+    <script type="text/template" id="weather-template">
+        <section class="weather">
+            <h2>Place name</h2>
+            <img src="<%= image_url %>" />
+            <p>Temperature:
+                <%= temperature %>
+            </p>
+            <p>Wind speed:</p>
+            <p>Humidity:</p>
+        </section>
+    </script>
+
 </head>
 
 <body>
     <h1>The Weather Spot</h1>
     <h2 id="conditions">conditions are...</h2>
     <p>temperature is <span id="temperature">???</span></p>
+
 </body>
 
 </html>
