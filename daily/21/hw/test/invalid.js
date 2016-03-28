@@ -4,7 +4,7 @@ var data = require('../data');
 
 describe('Expected patterns fail', function () {
     // Check valid names.
-    it('valid names pass', function () {
+    it('invalid names fail', function () {
         for (var i = 0; i < data.invalid.name.length; i++) {
             expect(validation.name(data.invalid.name[i])).to.be.equal(false);
 
@@ -12,7 +12,7 @@ describe('Expected patterns fail', function () {
     });
 
     // Check valid phone numbers.
-    it('valid phone numbers pass', function () {
+    it('invalid phone numbers fail', function () {
         for (var i = 0; i < data.invalid.phone.length; i++) {
             expect(validation.phone(data.invalid.phone[i])).to.be.equal(false);
 
@@ -20,7 +20,7 @@ describe('Expected patterns fail', function () {
     });
 
     // Check valid email addresses.
-    it('valid email addresses pass', function () {
+    it('invalid email addresses fail', function () {
         for (var i = 0; i < data.invalid.email.length; i++) {
             expect(validation.email(data.invalid.email[i])).to.be.equal(false);
 
@@ -28,14 +28,14 @@ describe('Expected patterns fail', function () {
     });
 
     // Check valid street addresses.
-    it('valid street addresses pass', function () {
+    it('invalid street addresses fail', function () {
         for (var i = 0; i < data.invalid.address.length; i++) {
             expect(validation.address(data.invalid.address[i])).to.be.equal(false);
         }
     });
 
     // Check valid usernames.
-    it('valid usernames pass', function () {
+    it('invalid usernames fail', function () {
         for (var i = 0; i < data.invalid.username.length; i++) {
             expect(validation.username(data.invalid.username[i])).to.be.equal(false);
 
@@ -43,7 +43,7 @@ describe('Expected patterns fail', function () {
     });
 
     // Check valid IP addresses.
-    it('valid IP addresses pass', function () {
+    it('invalid IP addresses fail', function () {
         for (var i = 0; i < data.invalid.ipaddr.length; i++) {
             expect(validation.ipaddr(data.invalid.ipaddr[i])).to.be.equal(false);
 
@@ -51,7 +51,7 @@ describe('Expected patterns fail', function () {
     });
 
     // Check valid URL's.
-    it('valid URL\'s pass', function () {
+    it('invalid URL\'s fail', function () {
         for (var i = 0; i < data.invalid.url.length; i++) {
             expect(validation.url(data.invalid.url[i])).to.be.equal(false);
 
