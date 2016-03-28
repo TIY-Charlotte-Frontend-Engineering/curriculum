@@ -1,0 +1,24 @@
+{
+  "name": "peeps",
+  "version": "1.0.0",
+  "description": "Sample contact address book app.",
+  "main": "gulp",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anyweez/peeps.git"
+  },
+  "author": "Luke Segars (@anyweez)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/anyweez/peeps/issues"
+  },
+  "homepage": "https://github.com/anyweez/peeps#readme",
+  "dependencies": {
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
