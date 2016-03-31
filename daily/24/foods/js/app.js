@@ -37,4 +37,25 @@ window.addEventListener('load', function () {
             }
         }
     });
+
+    $('.food').draggable();
+    $('h1').droppable({
+        drop: function (e, thud) {
+            console.log(e);
+
+            var elementId = thud.draggable.attr('id');
+            var id = parseInt(elementId.substr(5));
+
+            for (var i = 0; i < foods.length; i++) {
+                // Find the item to change, then change it.
+                if (foods[i].id === id) {
+                    foods[i].name = 'OMG ITS ' + foods[i].name;
+                }
+            }
+            console.log(foods);
+            // what element just got dropped?
+            // change the element: change the name
+
+        },
+    });
 });
