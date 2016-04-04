@@ -1,0 +1,14 @@
+{
+  "name": "hw",
+  "version": "1.0.0",
+  "description": "Functions, scopes, and closures",
+  "main": "mocha",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0"
+  }
+}
