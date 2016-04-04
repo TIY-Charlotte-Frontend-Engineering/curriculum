@@ -48,6 +48,8 @@ module.exports = {
      * There should also be a red(), green(), and blue() function that return the current
      * value for that color channel.
      *
+     * You can't have a color value less than zero or greater than 255.
+     *
      *  var color = hof.color(150, 200, 18);
      *  color.incrRed(12);
      *  color.incrGreen(30);
@@ -85,6 +87,8 @@ module.exports = {
      * Create a pocket object that can contain COINS and TRINKETS. The pocket
      * allows users to buy() trinkets for 10 coins, or sell() trinkets for 5
      * coins. You can also return the number of coins() or trinkets().
+     *
+     * You can't have a negative number of coins or trinkets.
      *
      *  var pocket = hof.pocket(50);
      *  pocket.buy(); // buy for 10 coins
