@@ -21,7 +21,7 @@ describe('accepting and returning functions', function () {
 
     it('temporarily apply discounts', function () {
         var tot = hof.total(20);
-        expect(tot).to.be.a('function');
+        expect(tot.discount).to.be.a('function');
         expect(tot.discount(0.20)).to.be.equal(16);
         expect(tot.discount(0.50)).to.be.equal(10);
         expect(tot.discount(1.00)).to.be.equal(0);
