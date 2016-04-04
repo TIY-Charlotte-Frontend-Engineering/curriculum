@@ -4,7 +4,7 @@ var hof = require('../hof');
 describe('accepting and returning functions', function () {
     it('create an object that returns a next() value', function () {
         var c = hof.counter(2);
-        expect(c).to.be.a('function');
+        expect(c).to.be.a('object');
         expect(c.next()).to.be.equal(3);
 
         var d = hof.counter(11);
