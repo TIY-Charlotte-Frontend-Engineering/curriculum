@@ -71,3 +71,5 @@ Maze.prototype.goLeft = function() {
         this.maze[this.y][this.x] = '.';
     }
 };
+
+module.exports = Maze;
