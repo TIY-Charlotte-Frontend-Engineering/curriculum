@@ -61,9 +61,9 @@ I'll try my best to keep this organized, but you should have links to everything
 | W08: **AngularJS**                        | tbd       | tbd           | tbd               |
 | W08: **Slip day**                         | tbd       | tbd           | tbd               |
 | W08: **Friday: tbd**                      | n/a       | n/a           | n/a               |
-| W09: **Special topic: NodeJS**            |           |               |                   |
-| W09: **Special topic: CI**                |           |               |                   |
-| W09: **Special topic: Typescript**        |           |               |                   |
-| W09: **Special topic: React**             |           |               |                   |
-| W09: **Special topic: Python**            |           |               |                   |
+| W09: **Special topic: NodeJS**            | tbd       | tbd           | tbd               |
+| W09: **Special topic: CI**                | tbd       | tbd           | tbd               |
+| W09: **Special topic: Typescript**        | tbd       | tbd           | tbd               |
+| W09: **Special topic: React**             | tbd       | tbd           | tbd               |
+| W09: **Special topic: Python**            | tbd       | tbd           | tbd               |
 
