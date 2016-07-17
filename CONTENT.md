@@ -43,13 +43,13 @@ I'll try my best to keep this organized, but you should have links to everything
 | W04: **Friday: tbd**                      | n/a       | n/a           | n/a               |
 | W05: **Review day**                       | tbd       | tbd           | tbd               |
 | W05: **Promises and modules**             | tbd       | tbd           | tbd               |
-| W05: **regular expressions**              | tbd       | tbd           | tbd               |
+| W05: **Regular expressions**              | tbd       | tbd           | tbd               |
 | W05: **Live coding**                      | tbd       | tbd           | tbd               |
 | W05: **Friday: tbd**                      | n/a       | n/a           | n/a               |
 | W06: **ES6 intro**                        | tbd       | tbd           | tbd               |
 | W06: **More on ES6**                      | tbd       | tbd           | tbd               |
-| W06: **MVC, REST, and Backbone**          | tbd       | tbd           | tbd               |
-| W06: **Backbone, day 2**                  | tbd       | tbd           | tbd               |
+| W06: **MVC, REST, and BackboneJS**        | tbd       | tbd           | tbd               |
+| W06: **BackboneJS, day 2**                | tbd       | tbd           | tbd               |
 | W06: **Friday: tbd**                      | n/a       | n/a           | n/a               |
 | W07: **AngularJS**                        | tbd       | tbd           | tbd               |
 | W07: **AngularJS**                        | tbd       | tbd           | tbd               |
