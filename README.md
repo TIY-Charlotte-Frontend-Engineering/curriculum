@@ -4,6 +4,8 @@ Welcome to the Iron Yard! It's great to have you on board and I'm excited to wor
 
 ![a lil bit of inspiration](https://s-media-cache-ak0.pinimg.com/564x/71/4f/e5/714fe52641a916066a12eabdf921da1f.jpg)
 
+### [Links to daily content](CONTENT.md)
+
 **Before class**
 
 1. Check out the [new student guide](GETTING-STARTED.md) to learn more about what to expect and what you should do to prepare.
