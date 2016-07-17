@@ -66,3 +66,25 @@ You can find the most up-to-date list of lecture topics [on the README.md for th
 The final two to three weeks will be dedicated to a final group project; these weeks will be largely unstructured collaboration time. You'll be forming and working in groups to develop something that you'll demo at graduation at Demo Day to potential employers, classmates, etc. You'll have a high degree of freedom in what you choose to build.
 
 Expect to use everything you've learned during the class (and likely things you'll have to pick up on your own) for your final project; it'll be the crowning item in your new portfolio so expect to put quite a bit of time into it.
+
+### My thoughts on mindset
+
+**This is your class.** You will get from it what you put into it. You've got access to not only instructors and materials, but also a class full of other students who are committed to the same goal that you are. Let's work together to make the most of it.
+
+## Success
+As your instructor, I would broadly classify 'success' in a few ways:
+
+- You've cultivated [a developer's mindset](http://skillcrush.com/2014/06/26/the-developer-mindset/), which will be helpful while coding and in life more broadly.
+- You're comfortable diving into small, medium, and large development tasks as a member of a team and feel both capable, confident, and competent.
+- You're able to convert an idea for a project into an actual thing.
+
+Hopefully you'll have your own targets that you'll use to define success, but these are the elements that I find most important (and fun!) about software development.
+
+## Achieving success
+A few tips to keep in mind:
+
+- **Seek to *understand* things.** Make sure that you understand *why* things work, not only *that* they work. Ask classmates, the internet, your instructor, or another developer. Software development is an incredibly deep rabbit hole and the more you know the better your foundation will be for growth after you leave the Iron Yard.
+- **Be open to constructive criticism.** We'll be conducting code reviews where the objective is for others to point out things you could've done better. Take this as a learning experience; whether others can understand your code is at least as important as whether you can!
+- **You won't understand everything right away.** The pace is intentionally fast and there's a ton of content. Try hard and give it time; you'll make it.
+- **Respect each other.** Your coworkers (classmates in this case) are your most valuable allies, especially when you're in uncomfortable territory. Be patient and help others with their questions and they'll do the same for you.
+- **Writing code requires a tremendous degree of precision.** Our normal forms of communicating ideas (speech, writing, etc) require us to be far less specific. The level of detail we use when 'communicating' with computers will take some time to feel natural but will become easier with practice.
