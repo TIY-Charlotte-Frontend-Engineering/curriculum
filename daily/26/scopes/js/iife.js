@@ -29,6 +29,12 @@ function runner(num) {
     return val;
 }
 
+function runner(num) {
+    return function () {
+        return num + 2;
+    };
+}
+
 window.addEventListener('load', function () {
     //    console.log(grate(num, 1, makeOp()));
     var run = runner(5);

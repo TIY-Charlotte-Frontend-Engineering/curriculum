@@ -5,7 +5,7 @@ function getSuperheroes(success, failure) {
     req.onload = function() {
         if (req.status === 200) {
             var response = JSON.parse(req.responseText);
-            success(response);
+            success(response.data.results);
         } else {
             failure({
                 code: req.status,
@@ -16,30 +16,56 @@ function getSuperheroes(success, failure) {
     req.send();
 }
 
-function announce(value) {
-    console.log(value);
-    return value;
-}
+window.addEventListener('load', function() {
+    var parent = document.getElementById('hero-list');
+    var superheroes = new Promise(getSuperheroes);
 
-function justNames(response) {    
-//    return response.data.results.map((hero) => hero.name);
-    return response.data.results.map(function (entry) {
-        return entry.name;
+    // Retrieve all the heroes, and then render them into the DOM.
+    superheroes.then(function(data) {
+        var gen = _.template(document.getElementById('list-item-template').textContent);
+        
+        for (let hero of data) {
+            var html = gen({
+                name: hero.name,
+                image: hero.thumbnail.path + '.' + hero.thumbnail.extension,
+            });
+            
+            var el = document.createElement('div');
+            el.addEventListener('click', function() {
+                console.log(hero.name);
+            });
+            el.innerHTML = html;            
+            parent.appendChild(el);
+        }
     });
-}
+});
 
-function freakOut(error) {
-    console.error(`error ${error.code}: ${error.message}`);
-    // console.error('error ' + error.code + ': ' + error.message);
-}
+
+
+//function announce(value) {
+//    console.log(value);
+//    return value;
+//}
+//
+//function justNames(response) {    
+////    return response.data.results.map((hero) => hero.name);
+//    return response.data.results.map(function (entry) {
+//        return entry.name;
+//    });
+//}
+//
+//function freakOut(error) {
+//    console.error(`error ${error.code}: ${error.message}`);
+//    // console.error('error ' + error.code + ': ' + error.message);
+//}
     
 window.addEventListener('load', function() {
-    var heroes = new Promise(getSuperheroes);
-    heroes
-        .then(announce)
-        .then(justNames)
-        .then(announce)
-        .catch(freakOut);
+//    var heroes = new Promise(getSuperheroes);
+//    heroes
+//        .then(announce)
+//        .then(justNames)
+//        .then(announce)
+//        .catch(freakOut);
     
 //    var please = new Promise(function (success, failure) {
 //        if (age > 15) {

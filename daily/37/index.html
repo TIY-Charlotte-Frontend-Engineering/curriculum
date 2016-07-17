@@ -6,11 +6,14 @@
     </head>
     <body ng-app="HelloWorldApp">
         <div ng-controller="MainAppController">
+            <div id="detailed-display">
+                <h1>{{ current.name }}</h1>
+                <h2>Superpower: {{ current.power }}</h2>
+            </div>
             <h1>My first Angular app</h1>
             <input type="text" ng-model="pancake">
-            <h2>by {{ person.name }}, age {{ person.age }}</h2>
             <ul>
-                <li ng-repeat="hero in heroes | filter: pancake">
+                <li ng-click="getDetails(hero.id)" ng-repeat="hero in heroes | filter: pancake">
                     <p>{{ hero.name }}</p>
                 </li>
             </ul>

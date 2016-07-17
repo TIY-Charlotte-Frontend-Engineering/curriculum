@@ -17,4 +17,8 @@ module.exports = Backbone.View.extend({
             calories: document.getElementById('food-calories').value,
         }); // tbd
     },
+
+    moveGuyUp: function (event) {
+
+    },
 });

@@ -76,6 +76,7 @@ describe('accepting and returning functions', function () {
 
     it('create a logger function that tracks message counts', function () {
         var logger = hof.messages();
+        
         expect(logger.record('first message')).to.be.equal('[1] first message');
         expect(logger.record('second message')).to.be.equal('[2] second message');
         expect(logger.record('another message')).to.be.equal('[3] another message');

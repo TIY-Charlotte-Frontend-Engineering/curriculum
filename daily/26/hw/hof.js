@@ -6,16 +6,20 @@ module.exports = {
      *  var c = hof.counter(2);
      *  c.next(); // return 3
      */
-    counter: function (start) {
-
-    },
+    counter: function (start) {},
 
     /**
      * Return a function that accepts the value to multiply `val` by.
      *
      *  multiply(3)(5); // return 15
      */
-    multiply: function (val) {},
+    multiply: function (val) {
+        function doIt(num) {
+            return val * num;
+        }
+
+        return doIt;
+    },
 
     /**
      * Return an object with a discount() property. The discount property should
@@ -56,7 +60,46 @@ module.exports = {
      *  color.incrBlue(-9);
      *  console.log(color.red(), color.green(), color.blue()); // 162, 230, 9
      */
-    color: function (r, g, b) {},
+    color: function (r, g, b) {
+        return {
+            incrRed: function (red) {
+                r = r + red;
+
+                if (r < 0) {
+                    r = 0;
+                } else if (r > 255) {
+                    r = 255;
+                }
+            },
+            incrGreen: function (green) {
+                g = g + green;
+
+                if (g < 0) {
+                    g = 0;
+                } else if (g > 255) {
+                    g = 255;
+                }
+            },
+            incrBlue: function (blue) {
+                b = b + blue;
+
+                if (b < 0) {
+                    b = 0;
+                } else if (b > 255) {
+                    b = 255;
+                }
+            },
+            red: function () {
+                return r;
+            },
+            green: function () {
+                return g;
+            },
+            blue: function () {
+                return b;
+            }
+        };
+    },
 
     /**
      * Track the number of lives remaining in a game.
@@ -81,7 +124,20 @@ module.exports = {
      *  msg = logger.record('second message');
      *  console.log(msg); // '[2] second message'
      */
-    messages: function () {},
+    messages: function () {
+        var count = 0;
+
+        var obj = {
+            record: function (msg) {
+                count = count + 1;
+
+                // increase logger variable by one before returning the message
+                return '[' + count + '] ' + msg;
+            }
+        };
+
+        return obj;
+    },
 
     /**
      * Create a pocket object that can contain COINS and TRINKETS. The pocket
@@ -103,5 +159,29 @@ module.exports = {
      *  console.log(pocket.coins()); // 35
      *  console.log(pocket.trinkets()); // 1
      */
-    pocket: function () {},
+    pocket: function (start) {
+        var coins = start;
+        var trinkets = 0;
+
+        return {
+            buy: function () {
+                if (coins >= 10) {
+                    coins = coins - 10;
+                    trinkets = trinkets + 1;
+                }
+            },
+            sell: function () {
+                if (trinkets >= 1) {
+                    coins = coins + 5;
+                    trinkets = trinkets - 1;
+                }
+            },
+            coins: function () {
+                return coins;
+            },
+            trinkets: function () {
+                return trinkets;
+            },
+        };
+    },
 };
