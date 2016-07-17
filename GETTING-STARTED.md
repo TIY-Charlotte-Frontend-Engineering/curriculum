@@ -67,11 +67,11 @@ The final two to three weeks will be dedicated to a final group project; these w
 
 Expect to use everything you've learned during the class (and likely things you'll have to pick up on your own) for your final project; it'll be the crowning item in your new portfolio so expect to put quite a bit of time into it.
 
-### My thoughts on mindset
+## My thoughts on mindset
 
 **This is your class.** You will get from it what you put into it. You've got access to not only instructors and materials, but also a class full of other students who are committed to the same goal that you are. Let's work together to make the most of it.
 
-## Success
+### Success
 As your instructor, I would broadly classify 'success' in a few ways:
 
 - You've cultivated [a developer's mindset](http://skillcrush.com/2014/06/26/the-developer-mindset/), which will be helpful while coding and in life more broadly.
@@ -80,7 +80,7 @@ As your instructor, I would broadly classify 'success' in a few ways:
 
 Hopefully you'll have your own targets that you'll use to define success, but these are the elements that I find most important (and fun!) about software development.
 
-## Achieving success
+### Achieving success
 A few tips to keep in mind:
 
 - **Seek to *understand* things.** Make sure that you understand *why* things work, not only *that* they work. Ask classmates, the internet, your instructor, or another developer. Software development is an incredibly deep rabbit hole and the more you know the better your foundation will be for growth after you leave the Iron Yard.
