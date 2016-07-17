@@ -1,1 +1,0 @@
-var url = 'https://openapi.etsy.com/v2/listings/active?api_key=a43b8axynxe6zhxod8469moh';
