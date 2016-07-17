@@ -2,6 +2,8 @@
 
 Welcome to the Iron Yard! It's great to have you on board and I'm excited to work with you over the coming months. This site is your one-stop shop for information before, during, and after the course and will contain everything from class policies to code submissions.
 
+![a lil bit of inspiration](https://s-media-cache-ak0.pinimg.com/564x/71/4f/e5/714fe52641a916066a12eabdf921da1f.jpg)
+
 **Before class**
 
 1. Check out the [new student guide](GETTING-STARTED.md) to learn more about what to expect and what you should do to prepare.
