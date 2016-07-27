@@ -22,7 +22,7 @@ I'll try my best to keep this organized, but you should have links to everything
 *You'll need your student account to access some of these links.*
 
 | Week  | Topic                                     | Notes                     | Assignment                    | Practice problem          |
-|---------------------------------------------------|---------------------------|-------------------------------|---------------------------|
+|:-----:|-------------------------------------------|---------------------------|-------------------------------|---------------------------|
 | 01    |  **HTML + CSS**                           | [notes][01a-notes]        | [assignment][01a-assignment]  | [practice][01a-practice]  |
 | 01    |  **Git and the terminal**                 | tbd                       | tbd                           | tbd                       |
 | 01    |  **Layouts and the box model**            | tbd                       | tbd                           | tbd                       |
