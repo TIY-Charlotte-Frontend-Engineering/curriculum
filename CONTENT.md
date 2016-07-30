@@ -53,7 +53,6 @@ I'll try my best to keep this organized, but you should have links to everything
 | 06    |  **ES6: day 1**                           | tbd                       | tbd                           | tbd                       |
 | 06    |  **ES6: day 2**                           | tbd                       | tbd                           | tbd                       |
 | 06    |  **Friday: tbd**                          | tbd                       | tbd                           | tbd                       |
-| 06    |  **MVC and BackboneJS**                   | tbd                       | tbd                           | tbd                       |
 | 07    |  **MVC and BackboneJS**                   | tbd                       | tbd                           | tbd                       |
 | 07    |  **BackboneJS, day 2**                    | tbd                       | tbd                           | tbd                       |
 | 07    |  **Testing in MVC**                       | tbd                       | tbd                           | tbd                       |
