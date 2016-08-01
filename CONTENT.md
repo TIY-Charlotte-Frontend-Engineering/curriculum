@@ -23,7 +23,7 @@ I'll try my best to keep this organized, but you should have links to everything
 
 | Week  | Topic                                     | Notes                     | Assignment                    | Practice problem          |
 |:-----:|-------------------------------------------|---------------------------|-------------------------------|---------------------------|
-| 01    |  **HTML + CSS**                           | [notes][01a-notes]        | [assignment][01a-assignment]  | [practice][01a-practice]  |
+| 01    |  **HTML + CSS**                           | [notes][01a-notes]        | [assignment][01a-assignment]  | n/a  			    |
 | 01    |  **Git and the terminal**                 | tbd                       | tbd                           | tbd                       |
 | 01    |  **Layouts and the box model**            | tbd                       | tbd                           | tbd                       |
 | 01    |  **The web**                              | tbd                       | tbd                           | tbd                       |
@@ -45,7 +45,7 @@ I'll try my best to keep this organized, but you should have links to everything
 | 04    |  **Friday: tbd**                          | n/a                       | n/a                           | n/a                       |
 | 05    |  **Review and testing, day 2**            | tbd                       | tbd                           | tbd                       |
 | 05    |  **Promises and modules**                 | tbd                       | tbd                           | tbd                       |
-| 05    |  **Regular expressions**                  | tbd                       | tbd                           | tbd                       |
+| 05    |  **Validation and regular expressions**   | tbd                       | tbd                           | tbd                       |
 | 05    |  **Prototypes and the prototype chain**   | tbd                       | tbd                           | tbd                       |
 | 05    |  **Friday: tbd**                          | n/a                       | n/a                           | n/a                       |
 | 06    |  **The event loop**                       | tbd                       | tbd                           | tbd                       |
@@ -76,6 +76,5 @@ I'll try my best to keep this organized, but you should have links to everything
 
 
 <!-- Week 1 references -->
-[01a-notes]:        https://google.com  "Example"
-[01a-assignment]:   https://google.com  "Example"
-[01a-practice]:     https://google.com  "Example"
+[01a-notes]:		https://online.theironyard.com/paths/414/units/2356/lessons/9298	"Notes"
+[01a-assignment]:   	https://online.theironyard.com/paths/414/units/2356/assignments/5409	"Assignment"
