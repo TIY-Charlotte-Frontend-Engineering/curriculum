@@ -1,0 +1,27 @@
+#navigation {
+    background-color: #ccc;
+    border: 2px solid black;
+    padding: 5%;
+}
+
+p {
+    border: 2px solid green;
+}
+
+/*p {
+    border: 2px solid green;
+    display: block;
+    padding: 10px 20px;
+    margin: 5px 10px;
+}*/
+
+.full {
+    width: 100%;
+    text-align: center;
+}
+
+.half {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+}
