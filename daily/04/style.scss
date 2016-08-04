@@ -1,0 +1,23 @@
+$primary-background: black;
+$secondary-background: orange;
+$primary-font: red;
+$emphasized-font: yellow;
+
+
+body {
+    background-color: $primary-background;
+}
+
+p {
+    color: blue;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+section {
+    background-color: blue;
+}
+
+span {
+    color: $primary-background;
+}
