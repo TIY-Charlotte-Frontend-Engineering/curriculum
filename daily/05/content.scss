@@ -1,0 +1,11 @@
+section {
+    @extend .column;
+
+    width: $column-width * 6;
+
+    /* rules to apply for small screens */
+    @media (max-width: 400px) {
+        display: block;
+        width: $column-width * 12;
+    }
+}

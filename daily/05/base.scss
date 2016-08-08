@@ -1,0 +1,8 @@
+/* 
+this is here because it could be used in header, content, or footer 
+*/
+.column {
+    display: inline-block;
+    width: $column-width;
+    padding: 1%;
+}
