@@ -1,0 +1,49 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+$button-color: #F7D965;
+$border-color: #333;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    @include grid-row();
+    background-color: #FFD79A;
+}
+
+header {
+    @include grid-column(3);
+    height: 100%;
+
+    li {
+        cursor: pointer;
+    }
+}
+
+section {
+    @include grid-column(9);
+
+    button {
+        background-color: $button-color;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+
+        padding: 5px;
+        margin: 8px 10px 8px 0;
+    }
+
+    input[type="text"] {
+        border: 1px solid $border-color;
+        border-radius: 2px;
+        margin: 2px;
+        padding: 3px;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
