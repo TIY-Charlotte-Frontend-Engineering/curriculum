@@ -10,6 +10,13 @@
         <div>
             <h2 class="stylin">Style: {{ name }}</h2>
             <h3>Length: {{ length }}</h3>
+            {{ #inStyle }}
+            <ul>
+                {{ #admirers }}
+                    <li class="admirer">{{ . }}</li>
+                {{ /admirers }}
+            </ul>
+            {{ /inStyle }}
         </div>
     </script>
 </head>

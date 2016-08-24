@@ -7,7 +7,6 @@
 
 function rock(item) {
     console.log('good day, ' + item);
-    // console.log(typeof(item));
     console.log(item(4));
 }
 
@@ -42,9 +41,3 @@ console.log('input items:');
 console.log(items);
 console.log('output items:');
 console.log(results);
-
-// results will equal [25, 121, 49, 4]
-
-
-
-

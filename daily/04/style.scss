@@ -1,4 +1,4 @@
-$primary-background: black;
+$primary-background: white;
 $secondary-background: orange;
 $primary-font: red;
 $emphasized-font: yellow;
@@ -20,4 +20,10 @@ section {
 
 span {
     color: $primary-background;
+}
+
+#crosses {
+    height: 8px;
+    background-image: url('assets/hatch-light@2x.png');
+    background-size: .6% auto;
 }

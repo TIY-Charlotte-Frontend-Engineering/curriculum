@@ -110,7 +110,7 @@ function createInitialLayout(api) {
         let submission = {};
         for (let i = 0; i < api.fields.length; i++) {
             submission[api.fields[i]] = inputs[i].value;
-        }
+        } // end for loop
 
         // Send the POST request.
         sendAlong(api, submission);
@@ -121,7 +121,7 @@ function createInitialLayout(api) {
 
     section.appendChild(list);
     document.querySelector('main').appendChild(section);
-}
+} // end function declaration
 
 /**
  * Step 2: setup

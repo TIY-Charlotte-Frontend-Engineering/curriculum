@@ -19,12 +19,14 @@ function createProfile() {
     let parent = document.querySelector('body');
     parent.appendChild(container);
 
+/*
     //   let image = document.createElement('img');
     //   image.src = "https://randomuser.me/api/portraits/women/24.jpg";
 
     //   // Adoption time.
     //   let parent = document.querySelector('body');
     //   parent.appendChild(image);
+    */
 }
 
 window.addEventListener('load', function () {
