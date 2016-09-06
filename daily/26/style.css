@@ -1,0 +1,29 @@
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.3em;
+    width: 600px;
+
+    border: 2px solid #666;
+
+    display: block;
+}
+
+input[type="text"].fail {
+    border: 2px solid #cc0000;
+    background-color: #FFABAB;
+    color: red;
+}
+
+input[type="text"].pass {
+    border: 2px solid #00cc00;
+    background-color: #abffab;
+    color: green;
+}
+
+button {
+    height: 80px;
+    width: 620px;
+
+    font-size: 1.3em;
+}
