@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://underscorejs.org/underscore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="http://backbonejs.org/backbone.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Trinket Trader</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#buy">buy</a></li>
+                <li><a href="#sell">sell</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home-view">
+            <h2>Home</h2>
+            <p>Money: $</p>
+            <p>Trinkets:</p>
+            <p>Exchange rate:</p>
+        </section>
+        <section id="buy-view">
+            <h2>Buy</h2>
+            <p>Price: $<span id="buy-price"></span></p>
+            <button id="buy-btn">Buy</button>
+        </section>
+        <section id="sell-view">
+            <h2>Sell</h2>
+            <p>Price:</p>
+            <button id="sell-btn">Sell</button>
+        </section>
+    </main>
+</body>
+
+</html>
