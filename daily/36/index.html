@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tip Calculator App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<!-- Angular attributes: used to 'decorate' specific elements for specific purposes -->
+<!-- ng-app declares the outer reaches of our application -->
+<body ng-app="TipCalcApp">
+    <!-- 'Controllers' connect views and models -->
+    <section ng-controller="MainController">
+        <!-- Data binding -->
+        <!-- Populate {{ username }} with the value of the username variable -->
+        <h1>Welcome, {{ username }}!</h1>
+        <!-- ng-model means 'tie the value of this to the variable' -->
+        <!-- $scope.money should be equal to the value in this text box -->
+        <!-- <input type="number" id="amount" ng-model="money"> -->
+        <input type="number" id="amount" ng-model="money">
+        <button ng-click="updateTip()">Calculate tip</button>
+        <h2>Tip amount: {{ tip }}</h2>
+        <h2>GRAND TOTAL: {{ total }}</h2>
+    </section>
+</body>
+
+</html>
