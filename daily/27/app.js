@@ -1,22 +1,19 @@
 let _ = require('lodash');
-let $ = require('jquery');
+window.jQuery = require('jquery');
+let $ = window.jQuery;
 
-/*
-function isHuman(person) {
-    if (person.length > 5) {
-        return true;
-    } else {
-        return false;
-    }
-}
-*/
+let jq = require('jquery-ui');
+
+console.log(Object.keys($));
+
 let moderator_name = 'Shelby';
 
 window.addEventListener('load', function () {
-    $('body').append('<h2>Comment by ' + moderator_name + '</h2>');
-    $('li').on('click', function () {
-        console.log('you clicked er');
-    })
+    // $('li').draggable();
+    // $('body').append('<h2>Comment by ' + moderator_name + '</h2>');
+    // $('li').on('click', function () {
+    //     console.log('you clicked er');
+    // })
 
 
 

@@ -1,3 +1,7 @@
+/**
+ * Create a model to store one transaction. These will be
+ * stored in the TransactionLog.
+ */
 let TransactionModel = Backbone.Model.extend({
     defaults: {
         label: 'Cornbread pudding',
@@ -5,14 +9,22 @@ let TransactionModel = Backbone.Model.extend({
     },
 });
 
+/**
+ * Container for all of the TransactionModels. Any time a new
+ * transaction is created, it needs to be added here.
+ */
 let TransactionLog = Backbone.Collection.extend({
     // What it's made of. Roar.
     model: TransactionModel,
 });
 
+/**
+ * View responsible for rendering the list of transactions as well
+ * as adding new transactions.
+ */
 let TransactionView = Backbone.View.extend({
     initialize: function () {
-        // 'When the model changes, call render()'
+        // 'When a new model gets added, call render()'
         this.model.on('add', this.render, this);
     },
 
@@ -34,6 +46,8 @@ let TransactionView = Backbone.View.extend({
     },
 
     // Make DOM do neat things.
+    // Name is not Backbone-specific but I pretty much always use 
+    // the same one.
     render: function () {
         let parent = this.el.querySelector('#transactions');
         parent.innerHTML = '';
@@ -53,6 +67,10 @@ let TransactionView = Backbone.View.extend({
     },
 });
 
+/**
+ * Create a model (collection) and a view, and link them together.
+ * The view can change anything in the #spender element.
+ */
 window.addEventListener('load', function () {
     let transactions = new TransactionLog();
 
