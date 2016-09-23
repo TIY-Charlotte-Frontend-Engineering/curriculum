@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="BookApp">
+    <section ng-controller="CheckoutController">
+        <!-- ng-model links info in the DOM with a $scope variable -->
+        <input type="text" placeholder="Name" ng-model="username">
+        <ul>
+            <!-- books is old, book is new -->
+            <li ng-repeat="book in books">
+                <h2>{{ book.title }}</h2>
+                <h3>{{ book.author }}</h3>
+                <h3>{{ book.borrowedBy }}</h3>
+                <button ng-click="borrow(book)">Borrow</button>
+            </li>
+        </ul>
+    </section>
+    <section ng-controller="SearchController">
+        <input type="text" ng-model="borrower" placeholder="Search for user...">
+        <button ng-click="search()">Search</button>
+
+        <!-- List of books BORROWED BY $scope.borrower -->
+        <ul>
+            <li ng-repeat="book in books">
+                <h2>{{ book.title }}</h2>
+                <h3>{{ book.author }}</h3>
+                <h3>{{ book.borrowedBy }}</h3>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
