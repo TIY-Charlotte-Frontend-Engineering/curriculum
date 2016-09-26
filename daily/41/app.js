@@ -15,17 +15,34 @@ app.config(function ($stateProvider) {
     $stateProvider.state({
         name: 'list',
         url: '/list',
-        // component eventually
-        template: '<h2>list view</h2>'
+        component: 'animals',
     });
 
     $stateProvider.state({
-        name: 'details',
+        name: 'details', // sref refers to this
         url: '/detail',
         // component eventually
         template: '<h2>detail view</h2>'
     });
 });
+
+// Component naming rules:
+//   luke add link
+app.component('animals', {
+    templateUrl: 'components/animal-list.html',
+    controller: 'AnimalListController',
+});
+
+app.controller('AnimalListController', function ($scope) {
+    console.log('loading controller');
+    // This should be in a service!
+    $scope.animals = [
+        { name: 'Hedgehog', eyes: 2, place: 'Greenbow, AL', facts: 'Large, pointy, and carnivorous.' },
+        { name: 'Liger', eyes: 6, place: 'Charlotte, NC', facts: 'Small n dainty.' },
+    ];
+});
+
+// TODO: create a detailcomponent
 
 app.component('beast', {
     // templateUrl: url to the template
@@ -47,11 +64,4 @@ app.controller('BeastController', function ($scope) {
         console.log('petting');
         console.log(beast);
     }
-})
-
-app.controller('AnimalsSeenController', function ($scope) {
-    $scope.animals = [
-        { name: 'Hedgehog', eyes: 2, place: 'Greenbow, AL', facts: 'Large, pointy, and carnivorous.' },
-        { name: 'Liger', eyes: 6, place: 'Charlotte, NC', facts: 'Small n dainty.' },
-    ];
-})
+});
