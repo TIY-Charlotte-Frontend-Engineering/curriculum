@@ -1,0 +1,8 @@
+<section class="beast">
+    <h2>{{ $ctrl.species.name }}</h2>
+    <p>Sited in: {{ $ctrl.species.place }}</p>
+    <p>Number of eyes: {{ $ctrl.species.eyes }}</p>
+    <p>Facts of note: {{ $ctrl.species.facts }}</p>
+    <!-- Define this function in the controller FOR THE COMPONENT -->
+    <button ng-click="pet($ctrl.species)">Pet</button>
+</section>

@@ -1,0 +1,15 @@
+<!doctype html>
+
+<html ng-app="AnimalApp">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="AnimalsSeenController">
+         <h1>Animals I've Seen</h1>
+         <!-- <beast> is a component with one input (species) -->
+         <beast ng-repeat="animal in animals" species="animal"></beast>
+    </body>
+</html>
