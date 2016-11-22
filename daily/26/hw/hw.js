@@ -13,7 +13,8 @@ module.exports = {
     /**
      * A valid phone number may or may not include an area code. If it
      * does, it should be a total of ten digits. If it doesn't, it should
-     * be a total of seven digits.
+     * be a total of seven digits. It may or may not include parentheses, spaces,
+     * and dashes.
      */
     phone: function (input) {
 
@@ -28,7 +29,7 @@ module.exports = {
     },
     /**
      * A valid street address includes a building number, followed by a 
-     * street name, followed by either {Ave, St, Park, Lane, Blvd}. It 
+     * street name, followed by one of {Ave, St, Park, Lane, Blvd}. It 
      * does not include city name, state name, country, zip code, or any
      * other information.
      */
