@@ -1,0 +1,37 @@
+body {
+    
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+
+    opacity: 0.7;
+
+    /* 
+        position: absolute; 
+        Exactly x, y pixels from the corners.
+        Removed from normal page flow.
+
+        position: relative; 
+        x, y pixels from where it would have been.
+        Kept in normal page flow.
+
+        position: fixed; 
+        Like absolute, but stays when the page scrolls.
+        Removed from normal page flow.
+    */
+    position: relative;
+    left: 10px;
+    top: 200px;
+    /* relative to the SCREEN (default) */
+    /* relative to the closest positioned parent (real rule) */
+    /*top: 0px;
+    right: 0px;
+    left: 0px;*/
+}
+
+nav li {
+    display: inline-block;
+    width: 20%;
+}

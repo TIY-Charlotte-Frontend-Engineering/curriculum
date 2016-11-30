@@ -1,0 +1,38 @@
+h1 {
+    /*font-size: 10;*/
+}
+
+#boxes {
+    margin-top: 100px;
+    border: 2px black;
+    padding: 20px;
+    background-color: #ccc;
+
+    /* Make this a flexbox */
+    display: flex;
+    flex-direction: row; /* or column */
+    justify-content: space-between;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+
+    border: 2px solid black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.salmon {
+    background-color: lightsalmon;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
