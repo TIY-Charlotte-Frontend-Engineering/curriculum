@@ -9,6 +9,10 @@ header {
     opacity: 0.7;
 
     /* 
+        Positions are relative to screen position by default.
+        Full rule: relative to nearest positioned parent element.
+        A 'positioned' element is one that has position set to anything but 'static'.
+
         position: absolute; 
         Exactly x, y pixels from the corners.
         Removed from normal page flow.
@@ -24,11 +28,6 @@ header {
     position: relative;
     left: 10px;
     top: 200px;
-    /* relative to the SCREEN (default) */
-    /* relative to the closest positioned parent (real rule) */
-    /*top: 0px;
-    right: 0px;
-    left: 0px;*/
 }
 
 nav li {

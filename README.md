@@ -1,26 +1,34 @@
-# Frontend engineering @ Charlotte
+## Congrats on a job well done!
 
-Welcome to the Iron Yard! It's great to have you on board and I'm excited to work with you over the coming months. This site is your one-stop shop for information before, during, and after the course and will contain everything from class policies to code submissions.
+I hope you're proud of how much you've accomplished over the past three months. We've had a chance to cover a lot of important ideas together but even more important than the class time is what you do after it. Take a well-deserved break but don't forget that this is the takeoff, not the landing, and there are a lot of great technologies, groups, projects, and other resources that can help you develop your skills.
 
-![a lil bit of inspiration](https://s-media-cache-ak0.pinimg.com/564x/71/4f/e5/714fe52641a916066a12eabdf921da1f.jpg)
+![e.e. cummins spreading the good word](https://img1.etsystatic.com/034/1/8040145/il_570xN.606585979_jm9p.jpg)
 
-### [Links to daily content](CONTENT.md)
+The goal of this guide is to provide some topics and resources for self-study that I'd recommend based on what you've learned so far. The first second is for stuff you *really should do* to keep your core strong, and the second is a buffet-style bucket of things that will help you broaden your knowledge beyond the core.
 
-**Before class**
+Stay in touch!
 
-1. Check out the [new student guide](https://github.com/TIY-Charlotte-Frontend-Engineering/curriculum/blob/master/GETTING-STARTED.md) to learn more about what to expect and what you should do to prepare.
-2. Do the [required prework](https://github.com/TIY-Charlotte-Frontend-Engineering/curriculum/blob/master/GETTING-STARTED.md#prework); it's required because it'll help soften the rampup and ensure we're all starting from a level playing field.
-3. Read over the [class policies](POLICIES.md).
-4. If you'd like, you can read up on [how assignments work](https://github.com/TIY-Charlotte-Frontend-Engineering/curriculum/blob/master/GETTING-STARTED.md#assignments) and what you'll be learning.
-5. Create an account on [Github](https://github.com) and join [our class group](https://github.com/TIY-Charlotte-Frontend-Engineering).
-6. Join the [Slack channel](tiycharlotte.slack.com)! This will be our primary communication tool during the course when we're not together in person.
+### SHOULD do
 
-**During class**
+- PRACTICE. Write code at least a few days a week. It doesn't matter what you do. Do old homeworks. Work on a project by yourself. Do practice problems and then throw them away. Use it or you'll lose it, and you've worked too hard for that.
 
-1. I'll be taking attendence every day, and recording both tardies and absences. We're strict on attendence because we need to move quickly to cover everything, and waiting around isn't an option. See the [class policies](POLICIES.md) for more details.
-2. All code that we go over in class will be available in this Github repository. You're welcome to keep anything we've done after the class is over (though we do ask that you don't share video, etc with people who are not students).
-3. I've put together a short write-up describing [a day in the life](https://github.com/TIY-Charlotte-Frontend-Engineering/curriculum/blob/master/GETTING-STARTED.md#a-day-in-the-life) while class is underway.
+- Get more practice with **responsive layouts**. Foundation is popular these days, but [Neat](http://neat.bourbon.io/) and [Bootstrap](https://v4-alpha.getbootstrap.com/layout/grid/) are pretty popular as well. If you can't get paid for it, practice reimplementing pages on [One Page Love](https://onepagelove.com/) or building your own website.
 
-**After class**
+- Listen to other people talking about development. For frontend in particular I'd recommend the [Javascript Jabber](https://devchat.tv/js-jabber) podcast, the [You Don't Know JS book series](https://github.com/getify/You-Dont-Know-JS), [A List Apart blog](http://alistapart.com/), and the bible of responsive web design, mysteriously named [Responsive Web Design](https://abookapart.com/products/responsive-web-design). I would try your best to [attend meetups](http://www.meetup.com/), and stay active within the Iron Yard community (including meeting alumni who have been working for a bit).
 
-All of the code you've written is your code, and you can take anything we've done in or for class away with you (code, videos, assignments, etc). We hope to stay in touch afterwards and help you grow your career so stay in touch!
+- Pick up a side project; I'd recommend starting with a personal portfolio site. Think through the design and content, throw it up on Surge or Github pages, and consider ordering a custom domain (`yourname.com`). Even once you're working it's a good idea to keep a side project alive because it'll allow you to continue to learn outside of the constraints of your work.
+
+### MIGHT do
+
+- Consider trying out a different **MVC framework** - you've got plenty to choose from. [React](https://facebook.github.io/react/) (or React Native for mobile apps) is the hotness now, and React's design pushes you to write modular code (a Good Thing). [Angular 2](https://angular.io/) is brand new but looks flippin' awesome, and introduces other great patterns like type safety (see Typescript below) and [reactive patterns](http://blog.angular-university.io/functional-reactive-programming-for-angular-2-developers-rxjs-and-observables/). [Vue](https://vuejs.org/) is delightfully simple. [Elm](http://elm-lang.org/) is heavily functional and leads to some of the highest code quality in the land. [Aurelia](http://aurelia.io/) is also new and supposedly very good.
+
+- [Typescript](https://www.typescriptlang.org/index.html) is one of the best recent developments in the Javascript ecosystem IMO. It allows you to write Javascript with *explicit type annotations* (you state what type each variable should have, and gulp or an alternative tool tells you when you break the rules). I personally find that I write much clearer and easier-to-debug code with Typescript than vanilla JS.
+
+- Try another language, or NodeJS!
+
+- Functional programming practice
+
+### Technologies I love
+
+- Typescript
+- Immutable JS 
