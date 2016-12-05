@@ -1,0 +1,28 @@
+/* Variables! */
+$site-bg-color: blue;
+$site-text-color: green;
+$site-logo-color: maroon;
+$small-column-width: 50%;
+$large-column-width: 100%;
+
+nav {
+    font-size: 1.2em;
+
+    /* Lists in navigation */
+    ul {
+        background-color: $site-bg-color;
+
+        li {
+            display: inline-block;
+            width: 20%;
+        
+            p .highlight {
+                font-style: italic;
+            }
+        }
+    }
+
+    h2 {
+        color: $site-bg-color;
+    }
+}
