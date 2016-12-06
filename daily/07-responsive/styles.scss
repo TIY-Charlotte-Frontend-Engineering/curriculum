@@ -1,0 +1,86 @@
+/* Import Foundation into my Sass */
+@import 'node_modules/foundation-sites/scss/foundation';
+
+/* In particular, we need two modules */
+@include foundation-global-styles;
+@include foundation-grid;
+
+$large-screen: 850px;
+
+body {
+    background-color: lightsalmon;
+}
+
+header {
+    /*
+        feature of foundation that indicates this element 
+        should be styled as a row.
+
+        using sass 'mixins' which will insert the necessary
+        css here.
+    */
+    @include grid-row();
+
+    nav {
+        display: none;
+
+        @include breakpoint($large-screen) {
+            display: block;
+        }
+    }
+
+    h1 {
+        /* In the parentheses, provide the # of columns */
+        @include grid-column(12);
+    }
+}
+
+section {
+    @include grid-row();
+
+    h2 {
+        @include grid-column(12);
+    }
+
+    div {
+        /* small mode */
+        @include grid-column(12);
+
+        /* Same as a media query with sugar on top. */
+        @include breakpoint($large-screen) {
+            @include grid-column(6);
+        }
+
+        background-color: green;
+        margin: 10px 0;
+    }
+}
+
+footer {
+    @include grid-row();
+
+    p {
+        @include grid-column(12);
+    }
+}
+
+
+
+/*  
+    Media query. Only apply this CSS
+    when the condition is met. In this
+    case the condition is 'width is 
+    at least 600px'.
+*/
+
+/*body {
+    background-color: lightsalmon;
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: blue;
+    }
+
+    // any css goes here 
+}*/
