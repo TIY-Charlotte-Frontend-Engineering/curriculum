@@ -1,0 +1,98 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+$sidekick-height: 400px;
+$large-screen: 500px;
+
+/* layouts first */
+header, section {
+    @include grid-row();
+}
+
+header {
+    background-color: #ccc;
+
+    .side {
+        display: none;
+
+        @include breakpoint($large-screen) {
+            display: block;
+        }
+
+        @include grid-column(2);
+    }
+
+    .middle {
+        @include grid-column(12);
+
+        @include breakpoint($large-screen) {
+            @include grid-column(8);
+        }
+        text-align: center;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+#hero {
+    max-width: 100%;
+    background-color: orange;
+
+    background-image: url('https://0041b200f62b3b1e2348-1120f113e97866ae33baf6d37d9ffbd6.ssl.cf5.rackcdn.com/images/_1600x628_crop_center-center_85/hero_xmas_list.jpg');
+    background-size: cover;
+    padding: 120px 0;
+
+    div {
+        @include grid-column(12);
+        text-align: center;
+    }
+}
+
+#sidekicks {
+    max-width: 100%;
+    color: white;
+    text-align: center;
+
+    .left {
+        display: none;
+
+        @include breakpoint($large-screen) {
+            display: block;
+        }
+
+        @include grid-column(8);
+        background-color: black;
+        /*padding: 100px 0; // option 1*/
+        height: $sidekick-height;
+        padding-top: $sidekick-height / 4;
+    }
+
+    .right {
+        @include grid-column(12);
+
+        @include breakpoint($large-screen) {
+            @include grid-column(4);
+        }
+        
+        background-color: red;
+        /*padding: 100px 0; // option 1*/
+        height: $sidekick-height;
+        padding-top: $sidekick-height / 4;
+    }
+}
