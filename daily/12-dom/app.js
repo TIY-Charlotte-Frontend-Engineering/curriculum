@@ -29,6 +29,13 @@ function init() {
         let child = document.createElement('li'); // parameter = element type
         child.textContent = textBox.value; // textContent is the text between <li> and </li>
 
+        let header = document.createElement('h2');
+        header.addEventListener('click', function () {
+            console.log('wow what a cool person');
+        });
+        header.textContent = 'Noah the Cool Person';
+        child.appendChild(header); // child = the <li>, header = the <h2>
+
         if (textBox.value[0].toLowerCase() === 'k') {
             child.classList.add('highlight'); // classList is sort of like an array
         }

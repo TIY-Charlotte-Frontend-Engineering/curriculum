@@ -68,3 +68,61 @@ function containsVowel(words) {
 
 let isVowely = containsVowel('house');
 console.log(isVowely);
+
+console.log('06 | piglatin');
+
+function piglatin(phrase) {
+    // 1. break phrases into words
+    let words = phrase.split(' '); // pass in the character to split on
+
+    // 2. break each word into letters (optional)
+    for (let i = 0; i < words.length; i++) {
+        // let word = words[i];
+        // word[0] // first letter of current word 
+
+        // 3. remove first letter and move it to the end
+        // 4. concatenate 'ay'
+        // 5. put all the words back together into a single sentence
+        //            ello                j             ay
+        words[i] = words[i].slice(1) + words[i][0] + 'ay'; 
+    }
+
+    console.log(words);
+    // Note: you could use join() instead of this loop if you want
+    // console.log(words.join(' '));
+    let output = ''; // the string that we provide as the answer
+    // convert the array into a string
+    for (let i = 0; i < words.length; i++) {
+        // after first iteration: 'eachesbay '
+        // after second iteration: 'eachesbay reaay '
+        // ...
+        output = output + words[i] + ' ';
+    }
+
+    // return a string
+    return output;
+}
+
+console.log(piglatin('jello')); // ellojay
+console.log(piglatin('beaches are for swimming')); // eachesbay reaay orfay wimmingsay
+
+console.log('08 | divisors');
+
+function divisors(max) {
+    // 1. create a empty array 
+    let nums = [];
+
+    // 2. iterate 1 - max 
+    for (let i = 1; i <= max; i++) {
+        // If the input is evenly divisible by i, keep it
+        if (max % i === 0) {
+            nums.push(i);
+        }
+    }
+
+    // return an array of numbers
+    return nums;
+}
+
+console.log(divisors(15)); // [1, 3, 5, 15]
+console.log(divisors(20)); // [1, 2, 4, 5, 10, 20]
