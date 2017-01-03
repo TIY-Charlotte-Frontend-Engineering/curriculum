@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Starter pack</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- add js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Create a mustache template -->
+    <script type="x-mustache-template" id="product-template">
+        <h2>{{ bookName }}</h2>
+        <p class="author">by {{ authorName }}</p>
+        <p class="price">Starting from ${{ price }}</p>
+        <button>Add to cart</button>
+    </script>
+</head>
+
+<body>
+    <h1>Start here</h1>
+
+    <main>
+        <section id="products">
+            <ul></ul>
+        </section>
+        <section id="cart">
+            <ul></ul>
+        </section>
+    </main>
+</body>
+
+</html>
