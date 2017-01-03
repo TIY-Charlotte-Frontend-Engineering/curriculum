@@ -7,3 +7,38 @@
 body {
     background-color: lightsalmon;
 }
+
+button {
+    background-color: white;
+    padding: 1%;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+header {
+    @include grid-row();
+
+    h1 {
+        @include grid-column(12);
+    }
+}
+
+main {
+    @include grid-row();
+
+    #products {
+        @include grid-column(8);
+    }
+
+    #cart {
+        @include grid-column(4);
+    }
+
+    .summary {
+        background-color: white;
+    }
+}

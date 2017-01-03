@@ -17,16 +17,28 @@
         <p class="price">Starting from ${{ price }}</p>
         <button>Add to cart</button>
     </script>
+
+    <script type="x-mustache-template" id="cart-template">
+        <p>{{ bookName }}: ${{ price }}</p>
+    </script>
 </head>
 
 <body>
-    <h1>Start here</h1>
+    <header>
+        <h1>Books B Us</h1>
+    </header>
 
     <main>
         <section id="products">
             <ul></ul>
         </section>
         <section id="cart">
+            <h2>Cart</h2>
+            <div class="summary">
+                <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+                <p>Tax: $<span id="cart-tax">0.00</span></p>
+                <p>Grand total: $<span id="cart-total">0.00</span></p>
+            </div>
             <ul></ul>
         </section>
     </main>

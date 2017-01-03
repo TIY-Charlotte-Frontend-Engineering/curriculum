@@ -61,8 +61,64 @@ function showProduct(product) {
     child.innerHTML = Mustache.render(template.innerHTML, {
         bookName: product.title,
         authorName: product.author,
-        price: product.price.toFixed(2),
+        price: displayPrice(product.price),
+    });
+
+    let button = child.querySelector('button'); // coming back
+    button.addEventListener('click', function () {
+        console.log('clicked on '+ product.title);
+        cart.push(product);
+        showCart();
     });
 
     parent.appendChild(child);
+}
+
+// Show the entire cart in the DOM
+function showCart() {
+    let cartList = document.querySelector('#cart ul');
+    cartList.innerHTML = ''; // clear away all items
+
+    // Loop through each item in the cart 
+    for (let i = 0; i < cart.length; i++) {
+        showCartItem(cart[i]);
+    } 
+
+    // update the total 
+    let subtotal = 0;
+    for (let i = 0; i < cart.length; i++) {
+        subtotal = subtotal + cart[i].price;
+    }
+
+    // add this number to the dom
+    document.querySelector('#cart-subtotal').textContent = displayPrice(subtotal);
+    document.querySelector('#cart-tax').textContent = displayPrice(subtotal * 0.1);
+    document.querySelector('#cart-total').textContent = displayPrice(subtotal + (subtotal * 0.1));
+}
+
+function showCartItem(item) {
+    // create a new <li>
+    // populate it with mustache template
+    // add it to dom 
+    let child = document.createElement('li');
+    let parent = document.querySelector('#cart ul');
+    let template = document.querySelector('#cart-template');
+
+    // right here
+    child.innerHTML = Mustache.render(template.innerHTML, {
+        bookName: item.title,
+        price: displayPrice(item.price),
+    });
+
+    parent.appendChild(child);
+}
+
+/**
+ * Pass in a price, get back the string we want to display 
+ * for this price.
+ * - Round
+ * - Two decimals
+ */
+function displayPrice(num) {
+    return (Math.round(num * 100) / 100).toFixed(2);
 }

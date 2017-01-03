@@ -1255,3 +1255,67 @@ button {
 
 body {
   background-color: lightsalmon; }
+
+button {
+  background-color: white;
+  padding: 1%;
+  cursor: pointer; }
+
+ul {
+  padding: 0;
+  list-style-type: none; }
+
+header {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto; }
+  header::before, header::after {
+    display: table;
+    content: ' '; }
+  header::after {
+    clear: both; }
+  header h1 {
+    width: 100%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      header h1 {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    header h1:last-child:not(:first-child) {
+      float: right; }
+
+main {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto; }
+  main::before, main::after {
+    display: table;
+    content: ' '; }
+  main::after {
+    clear: both; }
+  main #products {
+    width: 66.66667%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      main #products {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    main #products:last-child:not(:first-child) {
+      float: right; }
+  main #cart {
+    width: 33.33333%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      main #cart {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    main #cart:last-child:not(:first-child) {
+      float: right; }
+  main .summary {
+    background-color: white; }
