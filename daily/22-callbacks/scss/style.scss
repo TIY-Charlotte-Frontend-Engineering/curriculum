@@ -1,0 +1,89 @@
+/* Include Foundation */
+@import '../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+$media-medium: 800px;
+$media-large: 1190px;
+
+body {
+    background-color: lightsalmon;
+}
+
+/* Post-Foundation + SCSS */
+header {
+    @include grid-row();
+
+    h1 {
+        @include grid-column(12);
+        display: none;
+
+        @include breakpoint(1200px) {
+            display: block;
+        }
+    }
+}
+
+
+main {
+    @include grid-row();
+
+    section {
+        @include grid-column(12);
+        background-color: limegreen;
+
+        @include breakpoint(1200px) {
+            background-color: yellow;
+        }
+    }
+
+    /* No alternatives for small mode; these only exist in big mode */
+    @include breakpoint(1200px) {
+        .content {
+            @include grid-column(8);
+        }
+
+        .sidebar {
+            @include grid-column(4);
+        }
+    }
+}
+
+
+
+
+
+
+
+ /* Pre-Foundation */
+ /*
+header {
+    width: 100%;
+}
+
+main section {
+    width: 100%;
+    background-color: lawngreen;
+}
+
+@media (min-width: $media-medium) {
+    main .content {
+        display: inline-block;
+        width: 66%;
+
+        background-color: lightblue;
+    }
+
+    main .sidebar {
+        display: inline-block;
+        width: 33%;
+
+        background-color: lime;
+    }
+}
+
+@media (min-width: $media-large) {
+
+}
+*/
