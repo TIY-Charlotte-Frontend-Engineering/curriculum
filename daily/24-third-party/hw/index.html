@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Starter pack</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- add js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="app.js"></script>
+
+    <script type="x-mustache-template" id="menu-item">
+        <h3>{{ name }}</h3>
+        <p>{{ description }}</p>
+        <p>For the low low price of ${{ price }}</p>
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Luigi's Chicken Shack</h1>
+        <nav>
+            <p id="show-list">list</p>
+            <p id="show-add">add</p>
+        </nav>
+    </header>
+    <main>
+        <!-- First view: list items -->
+        <section id="list-view">
+            <h2>Popular Chicken Varieties</h2>
+            <input type="text" id="search" placeholder="Search">
+            <ul id="menu"></ul>
+        </section>
+        <!-- Second view: add items -->
+        <section id="add-view" class="hidden">
+            <h2>Add Dish</h2>
+        </section>
+    </main>
+</body>
+
+</html>
