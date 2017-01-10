@@ -8,7 +8,9 @@ module.exports = {
      * A valid name includes alphabetic characters or hyphens, and must
      * be at least two characters long.
      */
-    name: function (input) {},
+    name: function (input) {
+
+    },
 
     /**
      * A valid phone number may or may not include an area code. If it
