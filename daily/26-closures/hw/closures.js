@@ -55,8 +55,8 @@ module.exports = {
     },
 
     /**
-     * Return a string that contains the 'message id' before the message text.
-     * The message ID starts at one and increments with each record.
+     * Create a logging object that adds a 'message id' before the message 
+     * text. The message ID starts at one and increments with each record.
      *
      *  let logger = closures.messages();
      *  let msg = logger.record('first message');
