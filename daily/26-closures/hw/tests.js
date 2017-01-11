@@ -84,6 +84,6 @@ test('testing closures.pocket', test => {
     pocket.sell();
     pocket.sell();
 
-    test.is(pocket.coins(), 79);
+    test.is(pocket.coins(), 69);
     test.is(pocket.trinkets(), 1);
 }); 
