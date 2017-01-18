@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Starter pack</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- add js file -->
+    <link href="https://fonts.googleapis.com/css?family=Anaheim|Marvel" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="app.js"></script>
+
+    <script type="x-mustache-template" id="high-score-template">
+        <div class="rank">{{ rank }}</div>
+        <div class="name">{{ name }}</div>
+        <div class="score">{{ score }}</div>
+    </script>
+</head>
+
+<body>
+    <main>
+        <!-- First view -->
+        <section id="login">
+            <h1>The Button</h1>
+            <input type="text" id="name" placeholder="Your name">
+            <button id="go">Enter</button>
+        </section>
+
+        <!-- Second view -->
+        <section id="game" class="hidden">
+            <button id="the-button">
+                <p>Click me</p>
+                <p id="current-score">SCORE</p>
+            </button>
+
+            <h2>High scores</h2>
+            <ul id="high-scores">
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
