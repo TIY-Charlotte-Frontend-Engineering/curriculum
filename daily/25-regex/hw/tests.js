@@ -4,6 +4,7 @@ const validation = require('./hw');
 const data = require('./data');
 
 const fields = ['name', 'phone', 'email', 'address', 'username', 'url', 'ipaddr'];
+// const fields = ['email'];
 
 fields.forEach(field => {
     test(`successfully validating ${field}`, current => {

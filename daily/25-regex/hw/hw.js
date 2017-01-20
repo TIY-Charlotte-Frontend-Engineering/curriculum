@@ -9,7 +9,8 @@ module.exports = {
      * be at least two characters long.
      */
     name: function (input) {
-
+        let matcher = new RegExp('^[a-zA-Z-][a-zA-Z- ]+$');
+        return matcher.test(input); // test whether input matches the regex
     },
 
     /**
