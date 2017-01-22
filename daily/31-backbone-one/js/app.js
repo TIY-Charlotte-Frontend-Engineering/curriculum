@@ -16,7 +16,7 @@ const IngredientsView = require('./views/ingredients');
 window.addEventListener('load', function () {
     let ingredients = new IngredientsModel();
 
-    let mainView = new IngredientView({
+    let mainView = new IngredientsView({
         /* 
         The 'kingdom' the view is in charge of. All elements within this element 
         are solely controlled by this view. 
