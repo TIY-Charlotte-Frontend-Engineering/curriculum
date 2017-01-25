@@ -224,7 +224,17 @@ module.exports = Backbone.Router.extend({
         // console.log('got event id ' + eventId)
         // hide the other views
         // tell detailed view which event to show
-        this.views.c.render(id);
+
+        const movie = new Movie();
+        movie.set('id', id);
+        movie.fetch({
+            success: () => {
+                this.views.c.render(movie);
+            },
+        });
+
+        'http://movies.org/api?id=' + model.get('id');
+        // this.views.c.render(id);
         // show the detailed view 
     },
 

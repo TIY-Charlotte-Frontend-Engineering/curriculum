@@ -44,6 +44,7 @@ module.exports = Backbone.Router.extend({
         // console.log('got event id ' + eventId)
         // hide the other views
         // tell detailed view which event to show
+
         this.views.c.render(id);
         // show the detailed view 
     },
