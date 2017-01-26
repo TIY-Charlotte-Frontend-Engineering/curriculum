@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="BestBookApp">
+    <h1>WBB: World's Best Books</h1>
+    <!-- Section where we can add new best book -->
+    <section ng-controller="NewBookController">
+        <h2>Add new book</h2>
+        <p>Title</p>
+        <input type="text" placeholder="Title" ng-model="title">
+
+        <p>Author</p>
+        <input type="text" placeholder="Author" ng-model="author">
+
+        <p>Price</p>
+        <input type="number" placeholder="Price" ng-model="price">
+
+        <button ng-click="newBook()">Add book</button>
+    </section>
+    <!-- Section where we show all books -->
+    <section ng-controller="ShowBooksController">
+        <ul>
+            <!-- currentBook is a variable that exists in the ng-repeat -->
+            <!-- ng-class allows us to conditionally apply classes -->
+            <!-- 
+                ng-class is a beast with many shapes. for this shape, we're passing
+                in an object, and the property will be applied as a class when the value
+                is 'true' .
+
+                this gives this <li> the 'favorite' class whenever currentBook.isFavorite.
+            -->
+            <li ng-class="{ favorite: currentBook.isFavorite }" ng-repeat="currentBook in books">
+                <h3>{{ currentBook.title }}</h3>
+                <p>Written by {{ currentBook.author }}</p>
+                <!-- ng-show shows something when the condition is true -->
+                <!-- ng-hide hides something when the condition is true -->
+                <p ng-show="currentBook.isFavorite">I LIKE THIS</p>
+                <!-- 
+                    using the name currentBook here matters - its referring to the variable 
+                    in the ng-repeat.
+                -->
+                <button ng-hide="currentBook.isFavorite" ng-click="favoriteBook(currentBook)">Mark as favorite</button>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
