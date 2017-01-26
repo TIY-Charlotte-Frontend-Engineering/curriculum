@@ -54,19 +54,40 @@ app.controller('ShowBooksController', function ($scope, BookService) {
 
 // TODO: make a service to store books
 // Factories always return services.
-app.factory('BookService', function () {
+// $http is a built-in service for making AJAX requests
+app.factory('BookService', function ($http) {
     // Great example of a closure - books is preserved throughout
     // the lifetime of our app.
     const books = [];
 
-    books.push(new Book('test book', 'famous author', 17.89));
-    books.push(new Book('test book 2', 'another person', 17.89));
-    books.push(new Book('little-known masterpiece', 'a nobody', 17.89));
+    // Promises are a pattern in JS for organizing asynchronous
+    // operations (event-based things). Instead of using a ton
+    // of callbacks, promises let us describe the order using 
+    // then() statements.
+    $http.get('http://api.queencityiron.com/books').then(function (response) {
+        // const incoming = response.data.books;
+
+        // for (let i = 0; i < incoming.length; i++) {
+        //     // TODO: should use my constructor
+        //     books.push(incoming[i]);
+        // }
+
+        // angular.copy(from-somewhere, to-somewhere-else)
+        angular.copy(response.data.books, books);
+    });
 
     return {
         // ES6 syntax for function property
         add(book) {
             books.push(book);
+
+            // For a post request, the second argument is the data you
+            // want to send in the request body (it's automatically
+            // stringified).
+            $http.post('http://api.queencityiron.com/books', {
+                title: book.title,
+                author: book.author,
+            });
         },
         getAll() {
             return books;

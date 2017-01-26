@@ -37,6 +37,8 @@
                 this gives this <li> the 'favorite' class whenever currentBook.isFavorite.
             -->
             <li ng-class="{ favorite: currentBook.isFavorite }" ng-repeat="currentBook in books">
+                <!-- ng-src is same as src for dynamic image url's -->
+                <img ng-src="{{ currentBook.cover }}">
                 <h3>{{ currentBook.title }}</h3>
                 <p>Written by {{ currentBook.author }}</p>
                 <!-- ng-show shows something when the condition is true -->
