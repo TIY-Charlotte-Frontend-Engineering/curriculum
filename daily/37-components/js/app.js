@@ -40,9 +40,9 @@ app.component('snackButton', {
         // name of binding: type of binding
         // '<' means one-way binding (components cannot CHANGE the value, read only)
         // '=' means two-way binding (components CAN change the value, read / write)
-        // '@' means what we're passing is a function
+        // '&' means what we're passing is a function
         xyz: '<', 
-        tappedOn: '@', // made this name up
+        tappedOn: '&', // made this name up
     },
     controller: 'SnackButtonController',
 });

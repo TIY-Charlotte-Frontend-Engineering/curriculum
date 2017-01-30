@@ -3,5 +3,6 @@
 
 <!-- Bindings are available on the $ctrl ('controller') service. -->
 <!-- Bindings serve the EXACT same purpose as parameters to functions. -->
-<button ng-show="$ctrl.xyz.count > 0" ng-click="$ctrl.tappedOn($ctrl.xyz)">Add to receipt</button>
+<!-- For inputs to bound functions, you need to pass params in this funky synax below -->
+<button ng-show="$ctrl.xyz.count > 0" ng-click="$ctrl.tappedOn({ snack: $ctrl.xyz })">Add to receipt</button>
 <button disabled ng-show="$ctrl.xyz.count === 0">Out of stock</button>
