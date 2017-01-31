@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <!-- plz copy this... -->
+    <script src="https://npmcdn.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="PotentialFriendApp">
+    <h1>Potential Friendlies</h1>
+    <nav>
+        <ul>
+            <!-- 
+                ui-sref is a ui router thing. 
+                sref stands for 'state reference'
+                href stands for 'hypertext reference'
+            -->
+            <li><a ui-sref="list-em-all">List of people</a></li>
+            <li><a ui-sref="show-details">Details page</a></li>
+        </ul>
+    </nav>
+
+    <!-- Whatever state we're in, put its component here -->
+    <ui-view></ui-view>
+
+    <footer>
+        <h3>Copyright 2047, HaveFun Enterprises</h3>
+    </footer>
+</body>
+
+</html>
