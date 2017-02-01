@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="SmoothieApp">
+    <!-- Could use components -->
+    <main ng-controller="IngredientController">
+        <!-- Try our ... -->
+        <section>
+            <p>
+                <span>Try our</span>
+                <span ng-repeat="ingred in smoothie track by $index">
+                    {{ ingred.name }}
+                </span>
+                <span>smoothie!</span>
+            </p>
+        </section>
+        <!-- Ingredient list section -->
+        <section>
+            <input type="text" ng-model="searchTerm" placeholder="Search">
+            <input type="number" ng-model="maxPrice" placeholder="Price limit">
+            <!-- TODO: move to component soon -->
+            <div ng-repeat="ingred in ingredients | priceLimit: maxPrice | filter: searchTerm">
+                <!-- I made up all of this! -->
+                <ingredient-item item="ingred" request-add="add(ingred)"></ingredient-item>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
