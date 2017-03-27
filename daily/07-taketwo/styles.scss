@@ -1,0 +1,12 @@
+/* You'll always need to include Foundation via an import. */
+@import 'node_modules/foundation-sites/scss/foundation';
+
+/* Include CSS for these two modules, which are required for grids. */
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+@import 'partials/layout'; // _layout.scss
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/footer';

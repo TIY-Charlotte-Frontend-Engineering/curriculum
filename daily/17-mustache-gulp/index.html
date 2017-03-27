@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <script src="app.js"></script>
+
+        <!-- Issue: we want our HTML to live in our HTML file -->
+        <!-- Solution: put it there and then get it when we need it using JS -->
+        <script id="pet-template" type="x-mustache-template">
+            <h2 class="pet-name">{{ animalName }}</h2>
+            <p>All {{ animalName }}s are {{ adjective }}.</p>
+            <p><span>ALL OF THEM</span> are {{ adjective }}.</p>
+            <button class="lot-0">Add to Lot 0</button>
+        </script>
+    </head>
+    <body>
+         <h1>Pet shoppe</h1>
+         <ul id="pets"></ul>
+    </body>
+</html>

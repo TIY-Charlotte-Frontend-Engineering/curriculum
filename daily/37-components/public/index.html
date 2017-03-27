@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Snax Master</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- add js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="SnaxApp">
+    <section ng-controller="SnackListController">
+        <ul>
+            <li ng-repeat="snack in snacks">
+                <h2>{{ snack.name }}</h2>
+                <p>Available: {{ snack.count }}</p>
+
+                <!-- Adding a 'binding' called xyz -->
+                <!-- I MADE UP XYZ -->
+                <!-- My McFailTale: attribute should be kebab, property camel -->
+                <snack-button tapped-on="buy(snack)" xyz="snack"></snack-button>
+                <!--
+                <button ng-show="snack.count > 0" ng-click="buy(snack)">Add to receipt</button>
+                <button disabled ng-show="snack.count === 0">Out of stock</button>
+                -->
+            </li>
+        </ul>
+    </section>
+    <section ng-controller="ReceiptListController">
+
+    </section>
+</body>
+
+</html>
