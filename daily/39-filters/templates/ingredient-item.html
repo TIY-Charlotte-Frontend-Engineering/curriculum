@@ -1,8 +1,0 @@
-<!-- $ctrl is where all bindings are stored -->
-<!-- 'item' is the name of the binding -->
-<h2>{{ $ctrl.item.name }}</h2>
-<!-- 
-    Calling bound functions looks a tad weird. We have to pass an object.
-    We need to assign $ctrl.item to be the value of the 'ingred' parameter.
--->
-<button ng-click="$ctrl.requestAdd({ ingred: $ctrl.item })">Add for {{ $ctrl.item.price | asMoney }}</button>

@@ -1,87 +1,70 @@
-/* This is a comment in CSS. TOTALLY DIFFERENT! */
-
-/* 
-    CSS "rule" contains selectors and properties 
-    In English: "Make all body elements have a red background."
-
-    Selector: what to style
-    Properties: how to style it
-*/
-h1 {
-    background-color: blue;
-}
-
-h2 {
-    /* */
-    background-color: #d6482f;
-    border: 2px solid black;
-}
-
-p {
-    color: lightsalmon;
-}
-
-header h1 {
-    width: 45%;
-    display: inline-block;
-}
-
-header h2 {
-    width: 45%;
-    display: inline-block;
-    padding: 5px;
-    margin-left: 10px;
-}
-
-/* Child selector: all paragraphs in the header */
-header p {
-
-}
-
-header .testimonial {
-
-}
-
-footer p {
-
-}
-
-/* All paragraphs that have class="testimonial" */
-p.testimonial {
-
-}
-
-/* Hypothetical site */
-main li.highlight {
-
-}
-
-#heroes .sidekicks .age {
-
-}
-
-footer .copyright {
-
-}
-
+/* This is a comment. */
 
 /*
-    Types of selectors:
-
-        - Element selector
-        body {
-
-        }
-
-        - Class selector (dot)
-        .testimonial {
-
-        }
-
-        - ID selector (hashtag)
-        #callout {
-
-        }
-
-    You can also COMBINE SELECTORS (!?!?!?!?!?!?!?!?!)
+  The following is a CSS 'rule'. All CSS
+  is specified in terms of rules, and 
+  rules are made up of:
+    - selectors: what to style 
+    - properties: how to style it
 */
+
+/*
+  How to write 'good' CSS rules:
+    - Is this rule only EVER going to apply
+      to one thing, or potentially multiple?
+    - If one, how can you UNIQUELY identify it?
+    - If multiple, what's the category of things
+      that should be styled this way?
+*/
+body {
+    background-color: lightblue;
+}
+
+header {
+    background-color: green;
+    /* Text color */
+    /*color: white;*/
+}
+
+h1 {
+    font-weight: normal;
+}
+
+/* 'Child selector' - all ul's in 
+   the header */
+header ul {
+    background-color: yellow;
+}
+
+main ul {
+    background-color: lightsalmon;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    width: 20%;
+}
+
+/* Period = class */
+.highlight {
+    text-decoration: underline;
+}
+
+nav .highlight {
+    font-weight: bold;
+}
+
+/* Hashtag = id */
+/* In my opinion: not recommended */
+#focus {
+
+}
+
+main {
+    border: 2px solid black;
+    /* Add padding on all sides */
+    padding: 15px;
+    margin: 50px;
+    background-color: yellow;
+}
