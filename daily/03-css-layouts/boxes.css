@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+}
+
+/*
+ position property: change how position of an element is determined
+
+ WARNING: use sparingly but enjoy
+
+ - absolute: position relative to closest positioned parent
+    ex: overlay text on an image
+ - relative: position relative to where i would have been
+    ex: moving element on click (parent for absolute)
+ - fixed: position doesn't move no matter what
+    ex: sticky header / footer
+*/
+
+/*
+    MEASUREMENT
+
+    Pixels (px) - number of dots of color 
+    Ems (em) - measurement of the size of text based on width of 'M'
+    Percentages (%) - fraction of available space
+    Viewport heights (vh) - % of screen space
+        https://web-design-weekly.com/2014/11/18/viewport-units-vw-vh-vmin-vmax/
+
+    Images: constrained by # of available pixels
+        suggestion: prefer pixels, sometimes use % (might need multiple images for %)
+    Layouts: heavily dependent on the size of the user's screen 
+        suggestion: prefer percentages or viewport units (vw, vh)
+    Text: readability is heavily dependent on font size 
+        suggestion: prefer em, pt, or rem
+*/
+
+header {
+    background-color: orange;
+    position: fixed; /* lock position on screen, regardless of scroll */
+    /* top, bottom, left, right are for custom position types only */
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    padding: 5px;
+}
+
+header p {
+    margin: 0;
+}
+
+ul {
+    /*
+    Flexbox's use RATIOS for widths, not absolute widths.
+    */
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li {
+    width: 100%;
+}
+
+/*
+li {
+    border: 1px solid black;
+    padding: 5px;
+    display: inline-block;
+    width: 20%;
+    /*
+    box-sizing defines what width and height refer to
+        - content-box (default): content area
+        - border-box (really useful): content + padding + border
+    */
+    /*
+    box-sizing: border-box;
+}
+*/
+
+.one {
+    background-color: lightcoral;
+}
+
+.two {
+    background-color: lawngreen;
+}
+
+.three {
+    background-color: crimson;
+}
+
+.four {
+    background-color: cornflowerblue;
+}
+
+.five {
+    background-color: wheat;
+}
+
+.nyc {
+    background-color: lightsalmon;
+    position: relative;
+
+    padding-top: 100px;
+}
+
+.nyc p {
+    /*
+    position: absolute;
+
+    Position this element relative to the closest positioned parent.
+    */
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+
+    color: white;
+    font-size: 1em;
+}
