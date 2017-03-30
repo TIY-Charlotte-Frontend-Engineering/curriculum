@@ -1,0 +1,55 @@
+
+/*
+
+SPECIFICITY
+    - The more specific, the higher the priority.
+    - ID's = most specific
+    - Classes = medium
+    - Element = low
+
+*/
+.highlight {
+    background-color: lawngreen;
+}
+
+.highlight {
+    background-color: pink;
+}
+
+p {
+    background-color: green;
+}
+
+/*
+
+OTHER SELECTORS
+
+There are a total of three ways to select elements:
+    - ID, class, and element 
+
+You can COMBINE these in a lot of different ways:
+*/
+
+/* Descendent selector: get all p's below div's */
+div p {
+
+}
+
+/* Same element selector: get all p's with highlight class */
+p.highlight {
+
+}
+
+/* Child selector: p's right below a div */
+div > p {
+
+}
+
+h1, h2, h3, h4 {
+    padding: 5px;
+}
+
+/* 'Pseudoclass' selector: p tags that are being hovered over */
+p:hover {
+
+}
