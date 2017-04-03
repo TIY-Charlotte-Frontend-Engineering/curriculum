@@ -1,0 +1,51 @@
+/*
+  A CSS file is automatically a valid Sass file. You can 
+  copy and paste your CSS over if you want to (though
+  sometimes its easier / cleaner to rewrite).
+*/
+/*
+    WHY YOU SHOULD LIKE SASS
+
+    1. Nesting: putting rules inside of other rules
+        - Lets us mirror the structure of HTML and keep everything 
+          related to styling a particular section in one place.
+    2. Partials: breaking stylesheets into multiple files
+        - Instead of one long file, have many short files.
+        - Example: header.scss, main.scss, footer.scss, layout.scss
+    3. Variables: assign names to values vs writing them over and over again
+        - Common measurements (font size, colors, margins, media queries) can use 
+          variables instead of repeating the same measurements.
+    4. Watch: automatically generate CSS from Sass
+        - You can forget there's even a difference; all the wins with none of 
+          the losses.
+*/
+/* Variable: starts with $, named whatever you want (no spaces) */
+/* Common variable use case: media query sizes */
+/* .scss is assumed; don't need to include it! */
+/* Overall, how things fit together */
+body {
+  background-color: red; }
+
+/* Styles for each particular section */
+header {
+  /* All header-specific styles go here. */ }
+
+/* We'll get more into this tomorrow. */
+section.navigation {
+  padding: 5px; }
+  section.navigation ul {
+    padding: 0; }
+  section.navigation li {
+    /* Five pixels top and bottom, zero right and left */
+    margin: 5px 0; }
+
+section.content {
+  padding: 5px; }
+
+header {
+  padding: 5px; }
+
+footer {
+  padding: 5px; }
+
+/*# sourceMappingURL=out.css.map */

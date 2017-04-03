@@ -1,0 +1,73 @@
+/*
+  A CSS file is automatically a valid Sass file. You can 
+  copy and paste your CSS over if you want to (though
+  sometimes its easier / cleaner to rewrite).
+*/
+
+/*
+    WHY YOU SHOULD LIKE SASS
+
+    1. Nesting: putting rules inside of other rules
+        - Lets us mirror the structure of HTML and keep everything 
+          related to styling a particular section in one place.
+    2. Partials: breaking stylesheets into multiple files
+        - Instead of one long file, have many short files.
+        - Example: header.scss, main.scss, footer.scss, layout.scss
+    3. Variables: assign names to values vs writing them over and over again
+        - Common measurements (font size, colors, margins, media queries) can use 
+          variables instead of repeating the same measurements.
+    4. Watch: automatically generate CSS from Sass
+        - You can forget there's even a difference; all the wins with none of 
+          the losses.
+*/
+
+/* Variable: starts with $, named whatever you want (no spaces) */
+$content-padding: 5px;
+
+$color-primary: #cc33aa;
+
+/* Common variable use case: media query sizes */
+$size-md: 400px;
+$size-lg: 600px;
+$size-xl: 1200px;
+
+@media (min-width: $size-lg) {
+
+}
+
+/* .scss is assumed; don't need to include it! */
+/* Overall, how things fit together */
+@import 'layout';
+
+/* Styles for each particular section */
+@import 'header';
+@import 'main';
+@import 'footer';
+
+/* We'll get more into this tomorrow. */
+$num-columns: 10;
+
+section.navigation {
+    padding: $content-padding;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        /* Five pixels top and bottom, zero right and left */
+        margin: 5px 0;
+    }
+}
+
+section.content {
+    padding: $content-padding;
+}
+
+header {
+    padding: $content-padding;
+}
+
+footer {
+    padding: $content-padding;
+}
