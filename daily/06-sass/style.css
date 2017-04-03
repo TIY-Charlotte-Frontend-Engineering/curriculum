@@ -1,0 +1,62 @@
+h1, p, body, ul {
+    margin: 0;
+}
+
+header {
+    background-color: fuchsia;
+}
+
+/* Section with the class navigation */
+section.navigation {
+    background-color: lightseagreen;
+    height: 150px;
+    vertical-align: top;
+}
+
+section.content {
+    background-color: lightcoral;
+    height: 300px;
+    vertical-align: top;
+}
+
+footer {
+    background-color: lightslategray;
+}
+
+header, footer {
+    height: 100px;
+}
+
+/*
+    Media queries allow us to apply certain styles SOMETIMES (usually based on 
+    the screen size).
+
+    You use media queries to define your different "modes" -- you'll usually have
+    either two (small, large) or three (small, medium, large).
+
+    For example, "make these two blocks share a line when the screen is larger 
+    than 600 px."
+*/
+
+@media (min-width: 600px) {
+    main {
+        height: 300px;
+    }
+
+    /* Usually you want to make media queries as small as possible. */
+    section.navigation {
+        display: inline-block;
+        width: 25%;
+        height: 100%;
+    }
+
+    section.content {
+        display: inline-block;
+        width: 75%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
