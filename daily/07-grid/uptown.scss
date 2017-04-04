@@ -1,0 +1,76 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+$border-style: 1px dashed black;
+
+header, section, footer {
+    @include grid-row();
+}
+
+header {
+    h1 {
+        border: $border-style;
+        margin: 0;
+        text-align: center;
+
+        @include grid-column(10);
+        @include grid-column-offset(1);
+    }
+
+    .login {
+        @include grid-column(1);
+        border: $border-style;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            @include grid-column(12);
+            @include grid-column-offset(0);
+        }
+
+        .login {
+            display: none;
+        }
+    }
+}
+
+section.navigation {
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        @include grid-column(3);
+
+        list-style-type: none;
+        text-align: center;
+        border: $border-style;
+
+        padding: 100px 0;
+    }
+
+    @media (max-width: 600px) {
+        li {
+            @include grid-column(12);
+        }
+    }
+}
+
+section.perks {
+    .perk {
+        @include grid-column(4);
+
+        text-align: center;
+        border: $border-style;
+
+        padding: 150px 0;
+    }
+
+    @media (max-width: 600px) {
+        .perk {
+            @include grid-column(12);
+        }
+    }
+}

@@ -1,0 +1,48 @@
+// I looked this up beforehand. Always going to be the same.
+@import 'node_modules/foundation-sites/scss/foundation';
+
+// Foundation is really big, so we have to choose which
+// components we want to include (including EVERYTHING
+// is possible but would be a lot of CSS).
+//
+// FYI by default this will get rid of all styling on 
+// buttons.
+@include foundation-global-styles;
+@include foundation-grid;
+
+article {
+    border: 1px dotted black;
+}
+
+header {
+    // Foundation-magic for turning an element into a row.
+    @include grid-row();
+
+    h1 {
+        // Occupy 12 of the available 12 columns (full width).
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        // Skip one column before spanning 10 of them (this is for centering).
+        text-align: center;
+    }
+
+    div.login {
+        @include grid-column(1);
+    }
+}
+
+section.big-articles {
+    @include grid-row();
+
+    article {
+        @include grid-column(6);
+    }
+}
+
+section.small-articles {
+    @include grid-row();
+
+    article {
+        @include grid-column(3);
+    }
+}
