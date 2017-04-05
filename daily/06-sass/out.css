@@ -19,6 +19,9 @@
         - You can forget there's even a difference; all the wins with none of 
           the losses.
 */
+body {
+  background-color: red; }
+
 /* Variable: starts with $, named whatever you want (no spaces) */
 /* Common variable use case: media query sizes */
 /* .scss is assumed; don't need to include it! */
