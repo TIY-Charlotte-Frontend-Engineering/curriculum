@@ -92,6 +92,29 @@ window.addEventListener('load', function () {
 
     getAllBooks();
 
+    let addBtn = document.querySelector('#add-btn');
+    addBtn.addEventListener('click', function () {
+        let name = document.querySelector('#name');
+        let author = document.querySelector('#author');
+
+        // .value property on <input> elements gives us
+        // the value the user entered
+        console.log(name.value);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', 'https://tiy-28202.herokuapp.com/books');
+        request.addEventListener('load', function () {
+            console.log('received response');
+        });
+
+        // what we want to send to the server gets passed as an argument
+        // to the send function.
+        request.send(JSON.stringify({
+            title: name.value,
+            author: author.value,
+        }));
+    });
+
     // for (let i = 0; i < books.length; i++) {
     //     showBook(books[i]);
     // }
