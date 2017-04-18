@@ -1,0 +1,88 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+$color-primary-bg: #E8C23E;
+$color-primary-font: #333333;
+$color-secondary-bg: #fefefe;
+$color-secondary-font: #0a0a0a;
+$color-tertiary-bg: #333333;
+$color-tertiary-font: #AAAAAA;
+
+body {
+    background-color: $color-secondary-bg;
+}
+
+header {
+    @include grid-row();
+
+    padding: 10px;
+    padding: 10px;
+
+    background-color: $color-primary-bg;
+    color: $color-primary-font;
+
+    h1 {
+        @include grid-column(12);
+
+        margin-top: 0;
+        margin-bottom: 0; 
+    }
+}
+
+main ul {
+    @include grid-row();
+
+    background-color: $color-secondary-bg;
+    color: $color-secondary-font;
+
+    list-style-type: none;
+    padding: 0;
+
+    margin-bottom: 60px;
+
+    li {
+        @include grid-column(12);
+    }
+
+    li .from {
+        font-weight: bold;
+    }
+}
+
+footer {
+    @include grid-row();
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    padding: 10px 14px;
+    box-sizing: border-box;
+
+    background-color: $color-tertiary-bg;
+    color: $color-tertiary-font;
+
+    input[type="text"] {
+        padding: 8px;
+    }
+
+    #username {
+        @include grid-column(3);
+    }
+
+    #message {
+        @include grid-column(7);
+    }
+
+    #send {
+        @include grid-column(2);
+
+        background-color: $color-primary-bg;
+        color: $color-primary-font;
+
+        padding: 11px 0;
+    }
+}
