@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="traffic.css">
+
+    <!-- need to include this to use mustache -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="traffic.js"></script>
+
+    <script type="x-mustache-template" id="light-template">
+        <h2>{{ intersection }}</h2>         <!-- intersection name -->
+        <p>Traffic: {{ traffic }}</p>       <!-- traffic level -->
+        <h3>Operator list</h3>
+        <ul>
+            {{ #operators }}
+            <!-- 
+                Period means operators[i]
+                xyz means operators[i].xyz
+            -->
+            <li>{{ . }}</li>
+            {{ /operators }}
+        </ul>
+        <button class="{{ color }}">{{ color }}</button>    <!-- button to change the light -->
+    </script>
+</head>
+
+<body>
+    <!-- 
+        Make an app that renders a bunch of information about stoplights at various intersections
+        in a city. You should be able to control the traffic lights and the screen should update
+        based on whether each light is green, yellow, or red.
+    -->
+    <h1>Phoenix intersections</h1>
+    <!-- Where information about each light goes -->
+    <main>
+    </main>
+</body>
+
+</html>
