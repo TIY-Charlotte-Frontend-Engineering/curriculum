@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="checkout.js"></script>
+
+    <script type="x-mustache-template" id="food-template">
+        <h2>{{ foodName }}</h2>
+        <p>Price: ${{ foodPrice }}</p>
+    </script>
+</head>
+
+<body>
+    <!-- 
+        One button for each order. When you click it
+        displays the items in the order.
+    -->
+    <header>
+
+    </header>
+    <!--
+        Display all foods and checkout stuff.
+    -->
+    <main>
+        <section class="foods">
+            <ul></ul>
+        </section>
+        <section class="checkout">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="credit-card" placeholder="Credit card">
+        </section>
+    </main>
+</body>
+
+</html>
