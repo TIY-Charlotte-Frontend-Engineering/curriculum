@@ -8,5 +8,6 @@ module.exports = State.extend({
         // name : type
         doubloons: 'number',
         parrots: 'number',
+        pigeons: 'number',
     },
 });
