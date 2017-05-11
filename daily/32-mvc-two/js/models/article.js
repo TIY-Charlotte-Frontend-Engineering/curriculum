@@ -5,5 +5,8 @@ module.exports = State.extend({
         headline: 'string',
         author: 'string',
         body: 'string',
+
+        likes: 'number',
+        dislikes: 'number',
     },
 });

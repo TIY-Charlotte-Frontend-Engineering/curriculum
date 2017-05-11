@@ -3,9 +3,32 @@
 <html>
     <head>
         <script src="app.js"></script>
+        <script type="x-ampersand-template" id="article-template">
+            <article>
+                <h2 class="headline"></h2>
+                <p class="author"></p>
+                <p class="body"></p>
+
+                <button class="like">Like</button>
+                <p class="like-count"></p>
+            </article>
+        </script>
+        <script type="x-ampersand-template" id="status-template">
+            <p>
+                This article has <span class="like"></span> likes 
+                and <span class="dislike"></span> dislikes.
+            </p>
+        </script>
+        <script type="x-ampersand-template" id="article-list-template">
+            <section>
+                <h2>Trending articles</h2>
+                <ul></ul>
+            </section>
+        </script>
     </head>
     <body>
        <h1>Top News</h1>
-       <main></main>  
+       <main></main>
+       <section id="status"></section>
     </body>
 </html>
