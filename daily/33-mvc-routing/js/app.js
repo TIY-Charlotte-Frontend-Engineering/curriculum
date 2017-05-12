@@ -41,6 +41,11 @@ window.addEventListener('load', function () {
         add: acv,
     };
 
+    // Add a 'router' property to each view so that we can navigate
+    // if needed.
+    cgv.router = router;
+    acv.router = router;
+
     router.history.start({
         pushState: false,   // i'll look into this
     });
