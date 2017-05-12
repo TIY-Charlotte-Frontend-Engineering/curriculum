@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+
+    <script type="x-ampersand-template" id="chair-group-template">
+        <section class="show">
+            <h2>Chair group</h2>
+        </section>
+    </script>
+
+    <script type="x-ampersand-template" id="add-chair-template">
+        <section class="show">
+            <h2>Add chair</h2>
+        </section>
+    </script>
+</head>
+
+<body>
+    <h1>Chair inspector</h1>
+    <!-- # in a url is called the 'url fragment' - it refers
+    to a section of the current page -->
+    <a href="#view">View chairs</a> 
+    <a href="#add">Add chair</a>
+
+    <!-- For routing: have one container that holds all views -->
+    <main>
+        <section id="view-chair-group"></section>
+        <section id="view-add-chair"></section>
+    </main>
+</body>
+
+</html>
