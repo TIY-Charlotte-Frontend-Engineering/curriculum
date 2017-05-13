@@ -16,8 +16,8 @@
 // 4. Second view
 window.addEventListener('load', function () {
     let ArticleModel = require('./models/article');
-    // let ArticleView = require('./views/article');
-    // let StatusView = require('./views/status');
+    let ArticleView = require('./views/article');
+    let StatusView = require('./views/status');
 
     let ArticleCollection = require('./models/articlelist');
     let ArticleListView = require('./views/articlelist');
@@ -39,27 +39,27 @@ window.addEventListener('load', function () {
         dislikes: 5,
     });
 
-    let list = new ArticleCollection([article, article2]);
+    // let list = new ArticleCollection([article, article2]);
 
-    let listView = new ArticleListView({
-        el: document.querySelector('main'),
-        collection: list,
-    });
+    // let listView = new ArticleListView({
+    //     el: document.querySelector('main'),
+    //     collection: list,
+    // });
 
-    listView.render();
+    // listView.render();
 
     // 2. Create an instance of a view. Any time I create a view, I
     // specify where it shows up in the DOM (el) and what data it uses
     // to render (model)
-    // let showArticle = new ArticleView({
-    //     el: document.querySelector('main'),
-    //     model: article,
-    // });
+    let showArticle = new ArticleView({
+        el: document.querySelector('main'),
+        model: article,
+    });
 
-    // let showStatus = new StatusView({
-    //     el: document.querySelector('#status'),
-    //     model: article,
-    // });
+    let showStatus = new StatusView({
+        el: document.querySelector('#status'),
+        model: article,
+    });
 
     // Challenge: create a second view that displays the
     // text "This article has x likes and y dislikes" (replace
@@ -69,6 +69,6 @@ window.addEventListener('load', function () {
     //      - You don't need events, etc for the second view
 
     // 3. Render the view once at the beginning
-    // showArticle.render();
-    // showStatus.render();
+    showArticle.render();
+    showStatus.render();
 });

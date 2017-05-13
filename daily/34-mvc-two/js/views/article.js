@@ -24,6 +24,7 @@ module.exports = View.extend({
     // Gets called whenever the model changes. What needs to
     // update?
     render: function () {
+        console.log('rendering')
         // 'Use the template I already defined to render.'
         this.renderWithTemplate();
     }, 
