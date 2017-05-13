@@ -1,0 +1,29 @@
+
+div.col {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+
+    display: inline-block;
+}
+
+div.col.taxi {
+    background-color: yellow;
+}
+
+div.col.pass {
+    background-color: teal;
+}
+
+div.col.drop {
+    background-color: darkorange;
+}
+
+main > section {
+    display: none;
+}
+
+main > section.show {
+    display: block;
+}

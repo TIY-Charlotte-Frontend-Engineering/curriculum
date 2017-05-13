@@ -1,0 +1,19 @@
+{
+  "name": "taxi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "ampersand-collection": "^2.0.0",
+    "ampersand-router": "^4.0.0",
+    "ampersand-state": "^5.0.2",
+    "ampersand-view": "^10.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="x-ampersand-template" id="tpl-start">
+        <section>
+            <h2>Pick your buggy</h2>
+
+            <button id="hyb">Hybrid</button>
+            <button id="guz">Gas guzzler</button>
+        </section>
+    </script>
+    <script type="x-ampersand-template" id="tpl-play">
+        <section>
+            <h2>Play</h2>
+            <p>Driver location: (<span class="taxi_x"></span>, <span class="taxi_y"></span>)</p>
+            <p>Fuel remaining: <span class="gas"></span></p>
+            <div>
+                <button id="left">Left</button>
+                <button id="up">Up</button>
+                <button id="right">Right</button>
+                <button id="down">Down</button>
+            </div>
+            <div id="grid"></div>
+        </section>
+    </script>
+    <script type="x-ampersand-template" id="tpl-passengers">
+        <section>
+            <h2>Passengers</h2>
+            <ul></ul>
+        </section>
+    </script>
+    <script type="x-ampersand-template" id="tpl-passenger">
+        <li>
+            <p class="name"></p>
+            <p class="occupation"></p>
+            <p class="status"></p>
+        </li>
+    </script>
+    <script type="x-ampersand-template" id="tpl-end">
+        <section>
+            <h2>Game over</h2>
+            <p>You're stranded on the side of the road with no fuel.</p>
+            <p>Total fares collected: $<span class='fares'></span></p>
+        </section>
+    </script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Juno's Revenge</h1>
+    </header>
+    <main>
+        <section id="view-start"></section>
+
+        <section id="view-play"></section>
+        <section id="view-passengers"></section>
+ 
+        <section id="view-end"></section>
+    </main>
+    </header>
+</body>
+
+</html>
