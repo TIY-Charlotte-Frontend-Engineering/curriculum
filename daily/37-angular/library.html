@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script src="library.js"></script>
+</head>
+
+<body>
+    <h1>Books-r-us</h1>
+    <main ng-app="BookApp">
+        <section ng-controller="BookListController">
+            <ul>
+                <!--
+                    ng-repeat="newName in arrayName"
+                    ng-repeat="each item in array"
+                -->
+                <li ng-repeat="thingie in books">
+                    <h3>{{ thingie.title }}</h3>
+                    <p>{{ thingie.author }}</p>
+                    <button ng-if="!thingie.checked_out" ng-click="checkOut(thingie)">Check out</button>
+                    <button ng-if="thingie.checked_out" ng-click="bringBack(thingie)">Return</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

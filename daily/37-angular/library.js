@@ -9,3 +9,20 @@
  * 
  * Books should have a 'title' (string), 'author' (string), and 'checked_out' (boolean) property.
  */
+let app = angular.module('BookApp', []);
+
+app.controller('BookListController', function ($scope) {
+    $scope.books = [
+        { title: 'Treasure Island', author: 'Author A', checked_out: false },
+        { title: 'Pipi Longstocking', author: 'Author B', checked_out: false },
+        { title: 'Ubiquity', author: 'Author C', checked_out: false },
+    ];
+
+    $scope.checkOut = function (book) {
+        book.checked_out = true;
+    };
+
+    $scope.bringBack = function (book) {
+        book.checked_out = false;
+    };
+});
