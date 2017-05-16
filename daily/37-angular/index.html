@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <!-- ng-app: the scope of the entire application. everything outside is static -->
+    <main ng-app="ExpenseTracker">
+        <!-- SummaryController's $scope is available inside this <section> -->
+        <section ng-controller="SummaryController">
+            <h1>Summary of expenses:</h1>
+            <p>Name: {{ name }}</p>
+            <p>Total expenses: ${{ total }}</p>
+
+            <!-- ng-model ties the .value of an element to the scope -->
+            <!-- if you update the text box, you update the scope -->
+            <!--<input type="text" ng-model="name">-->
+            
+            <input type="text" ng-model="expense_name">
+            <input type="number" ng-model="expense_amount">
+            <button ng-click="add()">Add expense</button>
+
+            <h1 ng-if="total > 60">EXCEEDED SPENDING LIMIT</h1>
+            
+            <!-- ng-repeat generates a dom element for each
+                 element of an array -->
+            <ul>
+                <!-- 'expense' is a new variable (expenses[i]) -->
+                <li ng-repeat="expense in expenses">
+                    {{ expense.name }} was ${{ expense.amount }}
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+
+</html>
