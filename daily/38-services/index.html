@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="MusicApp">
+    <h1>Celine Machine</h1>
+
+    <!-- Note: we'll break this up into two controllers today -->
+    <main>
+        <!-- <ul> containing list of tracks -->
+        <ul ng-controller="MusicListController">
+            <li ng-repeat="song in songs">
+                <p>{{ song.title }}</p>
+                <p>by {{ song.artist }}</p>
+                <p>{{ song.album }}</p>
+                <button ng-click="play(song)">Play</button>
+            </li>
+        </ul>
+
+        <!-- separate section for 'now playing' -->
+        <section ng-controller="NowPlayingController">
+            <h2>Now playing</h2>
+            <p>{{ current.title }}, by {{ current.artist }}</p>
+        </section>
+    </main>
+</body>
+
+</html>

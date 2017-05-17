@@ -1,0 +1,9 @@
+li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+li p {
+    width: 30%;
+}
