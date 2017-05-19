@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="PokemonApp">
+    <h1>Pokemon catcher</h1>
+
+    <section ng-controller="PokeListController">
+        <ul>
+            <random-poke></random-poke>
+            <random-poke></random-poke>
+            <random-poke></random-poke>
+            <random-poke></random-poke>
+            <!--
+            <li ng-repeat="poke in pokemon">
+                <h2>{{ poke.name }}</h2>
+                <p>Element: {{ poke.element }}</p>
+            </li>
+            -->
+        </ul>
+    </section>
+</body>
+
+</html>
