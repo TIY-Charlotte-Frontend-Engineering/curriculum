@@ -59,3 +59,23 @@ app.controller('RandomPokeController', function ($scope, PokeService) {
 
     $scope.selected = options[index]; // use in our template
 });
+
+app.component('pokemon', {
+    templateUrl: 'templates/pokemon.html',
+    controller: 'PokemonController',
+    // third property: 'bindings'
+    bindings: {
+        /**
+         * This syntax is extremely dumb.
+         * 
+         *  '<' means one-way binding
+         *  '=' means two-way binding
+         *  '&' means you're passing a function
+         */
+        which: '<', // i'll explain soon
+    },
+});
+
+app.controller('PokemonController', function ($scope) {
+
+});

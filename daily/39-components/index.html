@@ -12,10 +12,14 @@
 
     <section ng-controller="PokeListController">
         <ul>
+            <!-- Random pokemon -->
             <random-poke></random-poke>
             <random-poke></random-poke>
             <random-poke></random-poke>
             <random-poke></random-poke>
+
+            <!-- Specific pokemon -->
+            <pokemon ng-repeat="poke in pokemon" which="poke"></pokemon>
             <!--
             <li ng-repeat="poke in pokemon">
                 <h2>{{ poke.name }}</h2>
