@@ -1,0 +1,17 @@
+<section>
+    <input type='text' ng-model='friend_name'>
+    <button ng-click='add()'>Add friend</button>
+
+    <ul>
+        <li ng-repeat="friend in friends">
+            <img ng-src="{{ friend.pic }}">
+            <h3>
+                <!-- 
+                    <a href=""> for normal link
+                    <a ui-sref=""> for link between routes
+                -->
+                <a ui-sref="details">{{ friend.username }}</a>
+            </h3>
+        </li>
+    </ul>
+</section>
