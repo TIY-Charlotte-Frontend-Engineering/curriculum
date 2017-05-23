@@ -11,7 +11,8 @@ function longx(letters) {
     let total = 0;
     let max = 0;
 
-    for (let i = 0; i < letters.length; i++) {
+    // set letters.length ==>> letters.length + 1
+    for (let i = 0; i < letters.length + 1; i++) {
         if (letters[i] === 'x') {
             total++;
         } else {
@@ -19,8 +20,13 @@ function longx(letters) {
             if (total > max) {
                 max = total;
             }
+            // added total = 0 outside if statements
+            total = 0;    
         }
     }
-
+    console.log('total ' + total);
+    console.log('max ' + max);
     return max;
 }
+
+longx('hdxfxxxxx');
