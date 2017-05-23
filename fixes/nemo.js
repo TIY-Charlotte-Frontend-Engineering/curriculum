@@ -9,8 +9,8 @@
 function nemo(prob, days) {
     // Try it out 1m times and get the success rate
     let successes = 0;
-    for (let i = 0; i > 1000000; i++) {
-        if (survivl(prob, days)) {
+    for (let i = 0; i < 1000000; i++) {
+        if (survival(prob, days)) {
             successes++;
         }
     }
