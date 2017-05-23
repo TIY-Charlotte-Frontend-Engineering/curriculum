@@ -35,10 +35,11 @@ app.config(function ($stateProvider) {
 
     $stateProvider.state({
         name: 'details',
-        url: '/details',
+        // colon indicates a route parameter
+        url: '/details/:username',
         component: 'ghDetails',
     });
-})
+});
 
 app.component('ghList', {
     templateUrl: 'templates/list.html',
@@ -62,10 +63,19 @@ app.controller('FriendsListController', function ($scope, FriendService) {
     // challenge: get the list of friends to render in the DOM
 });
 
-app.controller('FriendsDetailController', function ($scope, FriendService) {
-    $scope.friend = {
-        username: 'Jesse',
-    };
+/**
+ * For adding route params:
+ * 
+ * 1. Change the url to include a colon + variable name (:param will create a 'param'
+ * route parameter).
+ * 2. Add a service to the controller so we can get that value ($stateParams).
+ * 3. Make your app work with it.
+ */
+app.controller('FriendsDetailController', function ($scope, $stateParams, FriendService) {
+    $scope.friend = FriendService.getOneFriend($stateParams.username);
+
+    // get the route parameter called 'username' (:username in the url)
+    // console.log($stateParams.username);
 });
 
 app.factory('FriendService', function ($http) {
@@ -73,6 +83,21 @@ app.factory('FriendService', function ($http) {
 
     // always return an object
     return {
+        getOneFriend(username) {
+            const friend = {
+                username: null,
+                pic: null,
+            };
+
+            $http.get('https://api.github.com/users/' + username).then(function (response) {
+                // Update our friend object.
+                friend.username = response.data.login;
+                friend.pic = response.data.avatar_url;
+            });
+
+            return friend;
+        },
+
         addFriend(name) {
             // Create an object we can update later (once ajax requests are done).
             const friend = {

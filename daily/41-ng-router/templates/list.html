@@ -9,8 +9,13 @@
                 <!-- 
                     <a href=""> for normal link
                     <a ui-sref=""> for link between routes
+
+                    When we add route params, we need to specify the value of
+                    those params. Syntax is weird but what're ya gonna do.
+
+                    route({ param: value })
                 -->
-                <a ui-sref="details">{{ friend.username }}</a>
+                <a ui-sref="details({ username: friend.username })">{{ friend.username }}</a>
             </h3>
         </li>
     </ul>
