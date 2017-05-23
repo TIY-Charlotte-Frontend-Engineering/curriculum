@@ -17,7 +17,7 @@ function commas(num) {
     // 3. join back into a string and return
 
     // 2
-    let str = num.split(''); 
+    let str = num.toString().split(''); 
 
     for (let i = str.length - 3; i > 0; i = i - 3) {
         // splice deletes stuff (second argument) and adds stuff (third and beyond)
