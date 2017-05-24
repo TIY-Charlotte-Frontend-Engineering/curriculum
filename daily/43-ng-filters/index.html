@@ -1,0 +1,29 @@
+<!doctype html>
+
+<!--
+Stock ticker app that displays ticker names (AAPL) and the
+price of the stock. We'll store prices w/ 6 decimal places
+but display them with 2 decimal places.
+-->
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="StockApp">
+    <h1>Stock price tracker</h1>
+    <main ng-controller="StockController">
+        <input type="text" placeholder="search" ng-model="search">
+        <ul>
+            <!-- adding built-in search filter -->
+            <li ng-repeat="stock in stocks | filter: search">
+                <p>{{ stock.ticker | capitalize }} trading at {{ stock.price | dollar }}</p>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
