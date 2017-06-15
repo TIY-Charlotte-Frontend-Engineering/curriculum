@@ -10,6 +10,8 @@ Stay in touch!
 
 ### SHOULD do
 
+- **Clone [my curriculum repository](https://github.com/TIY-Charlotte-Frontend-Engineering/curriculum)**. Its public and I plan to keep it up forever but you should have your own copy stored locally just in case.
+
 - **PRACTICE Javascript**. Write code at least a few days a week, but ideally every day. It doesn't matter what you do. Do old homeworks. Work on a project by yourself. Do practice problems and then throw them away. Try contributing to an open-source project. Collaborate with another student on a side project. Use it or you'll lose it, and you've worked too hard for that. 
   - [codewars](https://www.codewars.com) is a great site for practice problems like we've been doign in class and lets you see how other users solve them as well.
 
